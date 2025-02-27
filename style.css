@@ -315,16 +315,15 @@ body {
 
 /* Featured section with large image */
 .featured-section {
-    height: auto;
-    min-height: 60vh;
+    min-height: 18rem;
     background-image: url('images/fsec.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1rem;
     position: relative;
 }
 
@@ -332,133 +331,207 @@ body {
     width: 100%;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-/* This class will make the image similar in size to an h2 element */
+/* This class will make the image more responsive */
 .heading-sized-image {
-    height: 6rem; /* Approximate height of an h2 */
-    width: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align properly with surrounding text */
-    margin: 0.83em 0; /* Standard h2 margin */
-    display: inline-block; /* Behave like a heading element */
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    max-height: 4rem; /* Smaller on mobile */
+    vertical-align: middle;
+    margin: 0.5em 0;
+    display: inline-block;
 }
 
-/* Warranty banners - row for mobile, column for desktop */
+/* Add this to your style.css file */
+/* Warranty Section with Blue Link logo */
+.warranty-section {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title-container img {
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    max-height: 4rem;
+    padding-bottom: 1rem;
+}
+
+/* Warranty banners - more compact for mobile */
 .warranty-banners {
     display: flex;
-    flex-direction: row; /* Row layout for mobile */
-    gap: 1rem; /* Reduced gap between banners */
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping if needed */
-}
-
-.warranty-banner {
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 0.75rem; /* Reduced gap between banners */
+    width: 90%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .warranty-banner {
     display: flex;
-    height: 65px; /* Reduced height from 80px */
-    border-radius: 5px;
+    height: 55px; /* Even smaller height for mobile */
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    flex: 1 1 auto;
-    min-width: 100px; /* Ensure minimum width */
-    max-width: 150px; /* Set maximum width to keep them compact */
-}
-
-/* Reorganized warranty years layout */
-.warranty-years {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  /* More compact warranty years layout */
+  .warranty-years {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 8px;
-    background-color: #14387F;
+    padding: 0 6px;
+    background-color: #14387F; /* Updated blue color */
     color: white;
-    width: 40%;
-}
-
-.number {
-    font-size: 24px; /* Reduced from 30px */
+    width: 35%;
+  }
+  
+  .number {
+    font-size: 18px; /* Smaller font size */
     font-weight: bold;
     line-height: 1;
-    margin-bottom: 2px;
-}
-
-.years-text {
-    font-size: 12px; /* Reduced from 14px */
+    margin-bottom: 1px;
+  }
+  
+  .years-text {
+    font-size: 9px; /* Smaller font size */
     line-height: 1.1;
     text-align: center;
-}
-
-.km {
-    font-size: 10px; /* Reduced from 12px */
-}
-
-/* Adjusted warranty text area */
-.warranty-text {
+  }
+  
+  .km {
+    font-size: 8px; /* Smaller font size */
+  }
+  
+  /* More compact warranty text area */
+  .warranty-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: white;
     flex-grow: 1;
-    padding: 0 8px;
-}
-
-/* Smaller text in warranty text area */
-.warranty-text span:first-child {
-    color: #4AABC8;
-    font-size: 20px; /* Reduced from 24px */
+    padding: 0 6px;
+  }
+  
+  .warranty-text span:first-child {
+    color: #4AABC8; /* Light blue color */
+    font-size: 16px; /* Smaller font size */
     font-weight: bold;
     line-height: 1;
-}
-
-.warranty-text span:last-child {
-    color: #14387F;
-    font-size: 14px; /* Reduced from 18px */
+  }
+  
+  .warranty-text span:last-child {
+    color: #14387F; /* Matching blue color */
+    font-size: 12px; /* Smaller font size */
     font-weight: bold;
     line-height: 1.2;
-}
-
-/* For warranty banner (only one text line) */
-.warranty-banner.warranty .warranty-text span {
-    color: #14387F;
-    font-size: 18px; /* Reduced from 22px */
-}
-
-/* Switch to column layout for desktop/web view */
-@media (min-width: 1024px) {
+  }
+  
+  /* For warranty banner (only one text line) */
+  .warranty-banner.warranty .warranty-text span {
+    color: #14387F; /* Matching blue color */
+    font-size: 14px; /* Smaller font size */
+  }
+  
+  /* Banner-specific colors - updated to use solid color */
+  .spare-part, .maintenance, .warranty {
+    background-color: #14387F; /* Updated to solid blue color matching the years section */
+  }
+  
+  /* Media query for tablets and above */
+  @media (min-width: 768px) {
+    .heading-sized-image {
+      max-height: 5rem;
+    }
+    
     .warranty-banners {
-        flex-direction: column; /* Change to column for desktop */
-        gap: 3rem; /* Slightly larger gap for vertical layout */
-        max-width: 300px; /* Match your original max-width */
+        flex-direction: row;
+        justify-content: center; /* Centers the cards in the container */
+        max-width: 900px; /* Set a max-width to prevent stretching too much */
+        margin: 0 auto; /* Centers the container itself */
     }
     
     .warranty-banner {
-        height: 70px; /* Slightly taller on desktop */
-        max-width: 100%; /* Full width of the container */
+      width: calc(33% - 1rem);
+      min-width: 120px;
+    }
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 1024px) {
+    .featured-section {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 3rem 4rem;
+      min-height: 50vh;
     }
     
-    /* Slightly larger font sizes for desktop */
+    .featured-content {
+      text-align: left;
+      margin-bottom: 0;
+      max-width: 50%;
+    }
+    
+    .heading-sized-image {
+      max-height: 6rem;
+    }
+    
+    .warranty-banners {
+        justify-content: center; /* Centers the cards in the container */
+        max-width: 900px; /* Set a max-width to prevent stretching too much */
+        margin: 0 auto; /* Centers the container itself */
+    }
+    
+    .warranty-banner {
+      height: 70px;
+      width: 100%;
+    }
+    
+    .warranty-years {
+      width: 40%;
+      padding: 0 10px;
+    }
+    
     .number {
-        font-size: 26px;
+      font-size: 26px;
     }
     
     .years-text {
-        font-size: 13px;
+      font-size: 13px;
+    }
+    
+    .km {
+      font-size: 10px;
+    }
+    
+    .warranty-text {
+      padding: 0 10px;
     }
     
     .warranty-text span:first-child {
-        font-size: 22px;
+      font-size: 22px;
     }
     
     .warranty-text span:last-child {
-        font-size: 16px;
+      font-size: 16px;
     }
     
     .warranty-banner.warranty .warranty-text span {
-        font-size: 20px;
+      font-size: 20px;
     }
-}
+  }
 /* Action Cards Section */
 .action-cards-section {
     padding: 2.5rem 1rem;
