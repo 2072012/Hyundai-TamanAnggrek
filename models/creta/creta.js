@@ -130,3 +130,77 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize button states
     showSlide(currentSlide);
 });
+let interiorSlideIndex = 0;
+
+// Function to move slides manually
+function moveInteriorSlide(n) {
+    const slides = document.querySelectorAll(".InteriorSlide");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    interiorSlideIndex += n;
+
+    if (interiorSlideIndex >= slides.length) {
+        interiorSlideIndex = 0;
+    }
+    if (interiorSlideIndex < 0) {
+        interiorSlideIndex = slides.length - 1;
+    }
+
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        thumbnails[i].classList.remove("active");
+    }
+
+    // Show the current slide
+    slides[interiorSlideIndex].style.display = "block";
+    thumbnails[interiorSlideIndex].classList.add("active");
+}
+
+// Function to show a specific slide when clicking on a thumbnail
+function showInteriorSlide(index) {
+    interiorSlideIndex = index;
+    moveInteriorSlide(0); // Call moveInteriorSlide with 0 to update the display
+}
+
+// Initialize the slider
+document.addEventListener('DOMContentLoaded', function () {
+    moveInteriorSlide(0); // Show the first slide and activate the first thumbnail
+});
+let secureSlideIndex = 0;
+
+// Function to move slides manually
+function moveSecureSlide(n) {
+    const slides = document.querySelectorAll(".SecureSlide");
+    const thumbnails = document.querySelectorAll(".securethumbnail");
+
+    secureSlideIndex += n;
+
+    if (secureSlideIndex >= slides.length) {
+        secureSlideIndex = 0;
+    }
+    if (secureSlideIndex < 0) {
+        secureSlideIndex = slides.length - 1;
+    }
+
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        thumbnails[i].classList.remove("active");
+    }
+
+    // Show the current slide
+    slides[secureSlideIndex].style.display = "block";
+    thumbnails[secureSlideIndex].classList.add("active");
+}
+
+// Function to show a specific slide when clicking on a thumbnail
+function showSecureSlide(index) {
+    secureSlideIndex = index;
+    moveSecureSlide(0); // Call moveInteriorSlide with 0 to update the display
+}
+
+// Initialize the slider
+document.addEventListener('DOMContentLoaded', function () {
+    moveSecureSlide(0); // Show the first slide and activate the first thumbnail
+});

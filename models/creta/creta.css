@@ -241,87 +241,440 @@ body {
 .hidden {
     display: none; /* Hide the button */
 }
-/* Models section */
-.models-section {
-    padding: 3rem 1rem;
+/* General Styling */
+.details-section {
+    width: 100%;
+    padding: 40px 20px;
+
+  }
+  
+  .card-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Adds space between title and subtitle */
+  }
+  
+  .details-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    flex: 1; /* Allows title to take up space */
+  }
+  
+  .details-subtitle {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    flex: 2; /* Allows subtitle to take up more space */
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .card-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .details-title {
+      font-size: 28px;
+    }
+  
+    .details-subtitle {
+      font-size: 16px;
+    }
+  }
+  /* General Styling */
+.performance-section {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  
+  .performance-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .performance-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .performance-text {
+    flex: 1;
+  }
+  
+  /* Flexbox for big and small text pairs */
+  .text-pair {
+    display: flex;
+    align-items: baseline; /* Align text to the baseline */
+    gap: 10px; /* Space between big and small text */
+    margin-bottom: 20px; /* Space between pairs */
+  }
+  
+  .big-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .small-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .small-text p {
+    color: #999999;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .small-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .performance-content {
+      flex-direction: column; /* Stack image and text vertically */
+      gap: 20px;
+    }
+  
+    .performance-image img {
+      max-width: 100%;
+    }
+  
+    .text-pair {
+      flex-direction: column; /* Stack big and small text vertically on mobile */
+      gap: 5px; /* Reduce gap for mobile */
+    }
+  
+    .big-text {
+      font-size: 28px;
+    }
+  
+    .small-text {
+      font-size: 16px;
+    }
+  }
+  /* General Styling */
+.InteriorSection {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  
+  .InteriorContainer {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Interior Section - Title and Subtitle */
+.InteriorTitleContainer {
+    text-align: center; /* Center align text */
+    margin-bottom: 5rem; /* Add space below the title and subtitle */
 }
 
-.section-title {
+.InteriorTitle {
+    font-size: 2rem; /* Adjust title font size */
+    font-weight: bold; /* Make title bold */
+    color: #333; /* Dark gray color for the title */
+    margin-bottom: 1rem; /* Space between title and subtitle */
+}
+
+.InteriorSubtitle {
+    font-size: 1rem; /* Adjust subtitle font size */
+    color: #666; /* Light gray color for the subtitle */
+    max-width: 600px; /* Limit subtitle width for better readability */
+    margin: 0 auto; /* Center the subtitle */
+}
+  .InteriorSlide {
+    display: none;
+    width: 100%;
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
+  }
+  
+  .InteriorSlide img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .InteriorCaption {
+    margin-top: 20px;
+  }
+  
+  .InteriorCaption h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .InteriorCaption p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .InteriorCaption small {
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .InteriorCaption a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .InteriorCaption a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation Buttons */
+  .InteriorPrev, .InteriorNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .InteriorPrev {
+    left: 10px;
+  }
+  
+  .InteriorNext {
+    right: 10px;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .InteriorCaption h2 {
+      font-size: 20px;
+    }
+  
+    .InteriorCaption p {
+      font-size: 14px;
+    }
+  
+    .InteriorCaption small {
+      font-size: 12px;
+    }
+    .InteriorPrev, .InteriorNext {
+        position: absolute;
+        top: 50%;
+        color: #fff;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+  }
+ /* Interior Section - Thumbnails */
+.InteriorThumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-/* Updated models grid for mobile */
-.models-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    max-width: 100%;
+.thumbnail {
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Active thumbnail - make the image bigger */
+.thumbnail.active img {
+    width: 100px; /* Increase the width */
+    height: 75px; /* Increase the height */
+    transform: scale(1.2); /* Scale the image up */
+}
+
+ /* Secure Section - Slideshow */
+.SecureSection {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.SecureContainer {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Secure Section - Title and Subtitle */
+.SecureTitleContainer {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.SecureTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.SecureSubtitle {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
     margin: 0 auto;
 }
 
-/* Updated model card styling for mobile */
-.model-card {
-    position: relative;
-    height: 300px; /* Shorter height for mobile */
-    overflow: hidden;
-    text-align: left;
+.SecureSlide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.SecureSlide img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.SecureCaption {
+    margin-top: 20px;
+   
+}
+
+.SecureCaption h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.SecureCaption p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.SecureCaption small {
+    font-size: 14px;
+    color: #999;
+}
+
+.SecureCaption a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.SecureCaption a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Buttons */
+.SecurePrev, .SecureNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.SecurePrev {
+    left: 10px;
+}
+
+.SecureNext {
+    right: 10px;
+}
+
+/* Secure Section - Thumbnails */
+.SecureThumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.securethumbnail {
+    cursor: pointer;
     border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.model-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f5f5f5;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+.securethumbnail img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
-.model-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
-    z-index: 1;
+/* Active thumbnail - make the image bigger */
+.securethumbnail.active img {
+    width: 100px;
+    height: 75px;
+    transform: scale(1.2);
 }
 
-/* Card content container */
-.model-card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    padding: 1.25rem;
-    width: 100%;
-}
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .SecureCaption h2 {
+        font-size: 20px;
+    }
 
-.model-name {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 0.25rem;
-    color: #fff;
-}
+    .SecureCaption p {
+        font-size: 14px;
+    }
 
-.model-price {
-    font-size: 1rem;
-    color: #e0e0e0;
-    margin-bottom: 0.75rem;
-}
+    .SecureCaption small {
+        font-size: 12px;
+    }
 
-.model-card .cta-button {
-    background-color: rgba(255, 255, 255, 0.9);
-    display: inline-block;
-    padding: 0.6rem 1.25rem;
-    font-size: 0.8rem;
+    .SecurePrev, .SecureNext {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .securethumbnail img {
+        width: 60px;
+        height: 45px;
+    }
+
+    .securethumbnail.active img {
+        width: 80px;
+        height: 60px;
+    }
 }
 /* Featured Section - Slideshow */
 .featured-section {
@@ -351,6 +704,7 @@ body {
     height: auto;
     border-radius: 10px;
 }
+
 
 /* Arrow Buttons */
 .arrow-button {
@@ -526,7 +880,6 @@ body {
       margin-bottom: 0;
       max-width: 50%;
     }
-    
     .heading-sized-image {
       max-height: 6rem;
     }
@@ -794,41 +1147,6 @@ body {
     text-align: center;
 }
 
-/* Experience section */
-.experience-section {
-    padding: 3rem 1rem;
-    background-color: #f5f5f5;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-.experience-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.experience-card h3 {
-    font-size: 1.3rem;
-    font-weight: 300;
-    margin-bottom: 0.75rem;
-}
-
-.experience-card p {
-    margin-bottom: 1.25rem;
-    color: #666;
-    font-size: 0.95rem;
-}
-
-.experience-card .cta-button {
-    width: 100%;
-}
 
 /* Footer */
 footer {
