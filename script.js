@@ -46,3 +46,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// Add this to your script.js file
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    const heroVideo = document.querySelector('.hero-video');
+    
+    // Function to hide loading screen
+    function hideLoadingScreen() {
+        loadingScreen.classList.add('fade-out');
+        // Remove from DOM after transition completes
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }
+    
+    // Check if video exists
+    if (heroVideo) {
+        // If video is already loaded/cached
+        if (heroVideo.readyState >= 3) {
+            hideLoadingScreen();
+        } else {
+            // Listen for when video can play through without stopping
+            heroVideo.addEventListener('canplaythrough', function() {
+                hideLoadingScreen();
+            });
+            
+            // Fallback if video takes too long (10 seconds)
+            setTimeout(function() {
+                if (!loadingScreen.classList.contains('fade-out')) {
+                    hideLoadingScreen();
+                }
+            }, 10000);
+        }
+    } else {
+        // No video found, hide loading screen immediately
+        hideLoadingScreen();
+    }
+});
