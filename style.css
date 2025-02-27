@@ -1,0 +1,894 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    color: #000;
+    background-color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+/* Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 100;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    height: 30px; /* Smaller logo for mobile */
+    z-index: 101;
+}
+
+/* Menu Toggle Hamburger Icon - Mobile optimized */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 101;
+    padding: 0;
+}
+
+.menu-toggle .bar {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Navigation container for toggle functionality */
+.nav-container {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 4rem 1.5rem 2rem;
+    z-index: 100;
+}
+
+.nav-container.active {
+    transform: translateX(0);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.nav-links li {
+    margin: 0.75rem 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-right a {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Hero section with video background */
+.hero {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.1) 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    width: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Center text on mobile */
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 3px; /* Added for better tap areas */
+}
+
+.cta-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Models section */
+.models-section {
+    padding: 3rem 1rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Updated models grid for mobile */
+.models-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Updated model card styling for mobile */
+.model-card {
+    position: relative;
+    height: 300px; /* Shorter height for mobile */
+    overflow: hidden;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.model-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.model-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+    z-index: 1;
+}
+
+/* Card content container */
+.model-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding: 1.25rem;
+    width: 100%;
+}
+
+.model-name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    color: #fff;
+}
+
+.model-price {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 0.75rem;
+}
+
+.model-card .cta-button {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.8rem;
+}
+
+/* Featured section with large image */
+.featured-section {
+    height: auto;
+    min-height: 60vh;
+    background-image: url('images/fsec.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+}
+
+.featured-content {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* This class will make the image similar in size to an h2 element */
+.heading-sized-image {
+    height: 6rem; /* Approximate height of an h2 */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align properly with surrounding text */
+    margin: 0.83em 0; /* Standard h2 margin */
+    display: inline-block; /* Behave like a heading element */
+}
+
+/* Warranty banners - row for mobile, column for desktop */
+.warranty-banners {
+    display: flex;
+    flex-direction: row; /* Row layout for mobile */
+    gap: 1rem; /* Reduced gap between banners */
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.warranty-banner {
+    display: flex;
+    height: 65px; /* Reduced height from 80px */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    flex: 1 1 auto;
+    min-width: 100px; /* Ensure minimum width */
+    max-width: 150px; /* Set maximum width to keep them compact */
+}
+
+/* Reorganized warranty years layout */
+.warranty-years {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    background-color: #14387F;
+    color: white;
+    width: 40%;
+}
+
+.number {
+    font-size: 24px; /* Reduced from 30px */
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.years-text {
+    font-size: 12px; /* Reduced from 14px */
+    line-height: 1.1;
+    text-align: center;
+}
+
+.km {
+    font-size: 10px; /* Reduced from 12px */
+}
+
+/* Adjusted warranty text area */
+.warranty-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    flex-grow: 1;
+    padding: 0 8px;
+}
+
+/* Smaller text in warranty text area */
+.warranty-text span:first-child {
+    color: #4AABC8;
+    font-size: 20px; /* Reduced from 24px */
+    font-weight: bold;
+    line-height: 1;
+}
+
+.warranty-text span:last-child {
+    color: #14387F;
+    font-size: 14px; /* Reduced from 18px */
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* For warranty banner (only one text line) */
+.warranty-banner.warranty .warranty-text span {
+    color: #14387F;
+    font-size: 18px; /* Reduced from 22px */
+}
+
+/* Switch to column layout for desktop/web view */
+@media (min-width: 1024px) {
+    .warranty-banners {
+        flex-direction: column; /* Change to column for desktop */
+        gap: 3rem; /* Slightly larger gap for vertical layout */
+        max-width: 300px; /* Match your original max-width */
+    }
+    
+    .warranty-banner {
+        height: 70px; /* Slightly taller on desktop */
+        max-width: 100%; /* Full width of the container */
+    }
+    
+    /* Slightly larger font sizes for desktop */
+    .number {
+        font-size: 26px;
+    }
+    
+    .years-text {
+        font-size: 13px;
+    }
+    
+    .warranty-text span:first-child {
+        font-size: 22px;
+    }
+    
+    .warranty-text span:last-child {
+        font-size: 16px;
+    }
+    
+    .warranty-banner.warranty .warranty-text span {
+        font-size: 20px;
+    }
+}
+/* Action Cards Section */
+.action-cards-section {
+    padding: 2.5rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.action-cards-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.action-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.action-card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #002167;
+}
+
+.action-card h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 0.7rem 1.25rem;
+    background-color: #002167;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for better tap targets */
+}
+/* Add this to your style.css file or modify the existing action-cards-container class */
+
+@media (min-width: 768px) {
+    .action-cards-container {
+        flex-direction: row;
+        justify-content: center; /* Centers the cards in the container */
+        max-width: 900px; /* Set a max-width to prevent stretching too much */
+        margin: 0 auto; /* Centers the container itself */
+    }
+
+    .action-card {
+        flex: 0 1 300px; /* This gives each card a basis of 300px but allows them to shrink */
+        margin: 0 1rem; /* Adds some spacing between cards */
+    }
+}
+
+/* Bio Profile Section */
+.bio-profile-section {
+    padding: 3rem 1rem;
+    background-color: #fff;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.bio-image {
+    flex: 0 0 200px;
+    width: 200px;
+}
+
+.bio-image img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio-content {
+    width: 100%;
+}
+
+.bio-content h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 0.25rem;
+    color: #002167;
+}
+
+.bio-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+.bio-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.25rem;
+}
+
+.bio-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.contact-item i {
+    font-size: 1.1rem;
+    color: #002167;
+    width: 20px;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0; /* Larger tap target */
+}
+@media (min-width: 1024px) {
+    .bio-container {
+        flex-direction: row;
+        text-align: left;
+        max-width: 900px; /* Set a maximum width */
+        margin: 0 auto; /* Center the container */
+        justify-content: center; /* Center the content horizontally */
+    }
+    
+    .bio-content {
+        width: auto; /* Change from 100% to auto */
+        max-width: 600px; /* Limit the text width */
+    }
+    
+    .bio-image {
+        flex: 0 0 200px; /* Keep the image size fixed */
+        margin-right: 2rem; /* Add some space between image and content */
+    }
+}
+/* Store Location Map Section */
+.map-section {
+    padding: 3rem 1rem;
+    background-color: #f5f5f5;
+}
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-details {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-details h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    color: #002167;
+}
+
+.map-details p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.map-details i {
+    color: #002167;
+    margin-right: 0.6rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.map-details .cta-button {
+    margin-top: 1.25rem;
+    background-color: #002167;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+/* Experience section */
+.experience-section {
+    padding: 3rem 1rem;
+    background-color: #f5f5f5;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card h3 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+}
+
+.experience-card p {
+    margin-bottom: 1.25rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.experience-card .cta-button {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2.5rem 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.25rem 0; /* Larger tap target */
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0.5rem;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Menu toggle animation */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Large screen adjustments */
+@media (min-width: 768px) {
+    .top-nav {
+        padding: 1rem 2rem;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .models-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .action-cards-container {
+        flex-direction: row;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-container {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        background-color: transparent;
+        transform: none;
+        padding: 0;
+        margin-left: 2rem;
+        width: auto;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        width: auto;
+        margin-bottom: 0;
+    }
+    
+    .nav-links li {
+        margin: 0 0 0 1.5rem;
+    }
+    
+    .nav-right {
+        flex-direction: row;
+        width: auto;
+    }
+    
+    .nav-right a {
+        margin: 0 0 0 1.5rem;
+        width: auto;
+    }
+    
+    .hero {
+        padding-bottom: 6rem;
+        padding-left: 4rem;
+        height: 100vh;
+    }
+    
+    .hero-content {
+        text-align: left;
+        max-width: 600px;
+    }
+    
+    .models-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .model-card {
+        height: 450px;
+    }
+    
+    .featured-section {
+        flex-direction: row;
+        padding: 4rem;
+        min-height: 70vh;
+    }
+    
+    .featured-content {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .action-button {
+        width: auto;
+    }
+    
+    .bio-container {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .bio-contacts {
+        align-items: flex-start;
+    }
+    
+    .map-container {
+        flex-direction: row;
+    }
+    
+    .map-container iframe {
+        height: 450px;
+    }
+    
+    .map-details .cta-button {
+        width: auto;
+    }
+    
+    .experience-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .experience-card .cta-button {
+        width: auto;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .social-icons {
+        margin-bottom: 0;
+    }
+}
