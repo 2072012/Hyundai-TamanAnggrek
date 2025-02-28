@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai Stargazer</title>
+    <link rel="stylesheet" href="stargazer.css">
+    <script src="stargazer.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="/images/logo.png" alt="Hyundai Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p>Loading experience...</p>
+        </div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="/home.html"><img class="logo" src="/images/logo.png" alt="Logo"></a>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-container" id="navContainer">
+            <ul class="nav-links">
+                <li><a href="/home.html">Models</a></li>
+                <li><a href="stargazer.html">STARGAZER</a></li>
+                <li><a href="#">blabla</a></li>
+                <li><a href="#">blabla</a></li>
+                <li><a href="#">blabla</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#location">Location</a>
+                <a href="/home.html">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <!-- Optimized video loading with lazy loading and poster image -->
+        <video class="hero-video" autoplay muted loop playsinline poster="/images/stargazer/stargazer-model.jpg" loading="lazy">
+            <source src="stargazer.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 id="models">The New STARGAZER</h1>
+            <p>Your Family's Perfect Companion</p>
+            <a href="#" class="cta-button">Explore Models</a>
+        </div>
+    </section>
+
+    <!-- Featured Section - Slideshow -->
+    <section class="featured-section">
+        <h2 class="featured-section-title">The New STARGAZER</h2>
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="slides">
+                <div class="slide">
+                    <img src="/images/stargazer/s1.png" alt="STARGAZER Image 1">
+                </div>
+                <div class="slide">
+                    <img src="/images/stargazer/s2.png" alt="STARGAZER Image 2">
+                </div>
+                <div class="slide">
+                    <img src="/images/stargazer/s3.png" alt="STARGAZER Image 3">
+                </div>
+                <div class="slide">
+                    <img src="/images/stargazer/s4.png" alt="STARGAZER Image 4">
+                </div>
+                <div class="slide">
+                    <img src="/images/stargazer/s5.png" alt="STARGAZER Image 5">
+                </div>
+            </div>
+
+            <!-- Arrow Buttons -->
+            <button class="arrow-button prev-button">&lt;</button>
+            <button class="arrow-button next-button">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Reusable Section Component -->
+    <div class="caption">
+        <div class="caption-title">Bintangnya inovasi</div>
+        <div class="caption-subtitle">Kemudahan demi kemudahan dapat Anda rasakan dengan teknologi penuh inovasi yang di berikan STARGAZER</div>
+    </div>
+
+    <div class="caption">
+        <div class="caption-title">Bintang baru keluarga</div>
+        <div class="caption-subtitle">Saatnya menikmati era baru MPV bersama New STARGAZER, inovasi mobilitas untuk setiap perjalanan berkualitas. Hadirkan kenyamanan maksimal dan fitur berkelas, serta ruang luas untuk kebersamaan Anda dan orang terkasih</div>
+    </div>
+
+    <!-- Performance Section -->
+    <section class="performance-section">
+        <div class="performance-content">
+            <div class="performance-image">
+                <img src="/images/stargazer/s1.png" alt="Performance Image">
+            </div>
+            <div class="performance-text">
+                <div class="text-pair">
+                    <div class="big-text">84.4 kW (115 PS) / 6,300 rpm</div>
+                    <div class="small-text">Maximum Power</div>
+                </div>
+                <div class="text-pair">
+                    <div class="big-text">143.8 Nm / 4,500 rpm</div>
+                    <div class="small-text">Maximum Torque</div>
+                </div>
+                <div class="small-text"><p>* Specifications may vary depending on trim level</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performance-section">
+        <div class="performance-content">
+          <div class="performance-text">
+            <!-- Pair 1 -->
+            <div class="text-pair">
+              <div class="big-text">Bintangnya Kenyamanan Kelas Atas</div>
+              <div class="small-text">Dengan pilihan 7-seater, New STARGAZER dapat menjadi pilihan untuk Anda yang bepergian dengan keluarga besar
+            </div>
+            </div>
+          </div>
+          <div class="performance-image">
+            <img src="/images/stargazer/s-in.jpg" alt="Performance Image">
+          </div>
+        </div>
+    </section>
+
+
+    <!-- Interior Section -->
+    <section class="InteriorSection">
+        <div class="InteriorContainer">
+            <div class="InteriorTitleContainer">
+                <div class="InteriorTitle">Interior Features</div>
+                <div class="InteriorSubtitle">Dengan desain interior yang luas dan nyaman, dilengkapi fitur canggih agar setiap perjalanan Anda semakin nyaman untuk meraih setiap misi</div>
+            </div>
+
+            <!-- Slides and Thumbnails -->
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in1.jpg" alt="Slide 1">
+                <div class="InteriorCaption">
+                    <h2>7-Seater</h2>
+                    <p>Dengan pilihan 7-seater, New STARGAZER dapat menjadi pilihan untuk Anda yang bepergian dengan keluarga besar. Dengan pengaturan kursi yang fleksibel, perjalanan Anda akan tetap terasa nyaman</p>
+                    <!-- <p>Enjoy the open sky with the STARGAZER's panoramic sunroof, available on select trims.</p> -->
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in2.jpg" alt="Slide 2">
+                <div class="InteriorCaption">
+                    <h2>6-Seater</h2>
+                    <p>New STARGAZER menghadirkan pilihan 6-seater dengan Captain Seat pada baris kedua. Menggabungkan keluasan ruang dan kenyamanan, dengan akses menuju kursi baris ketiga yang lebih mudah</p>
+                    <!-- <p>Stay connected with the STARGAZER's advanced infotainment system.</p> -->
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in3.jpg" alt="Slide 3">
+                <div class="InteriorCaption">
+                    <h2>Leatherette Seat</h2>
+                    <p>* Hanya tersedia pada trim Prime</p>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in4.jpg" alt="Slide 4">
+                <div class="InteriorCaption">
+                    <h2>Wireless Smartphone Charger</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in5.jpg" alt="Slide 5">
+                <div class="InteriorCaption">
+                    <h2>Electric Parking Brake</h2>
+                    <p>* Hanya tersedia pada trim Essential Tech dan Prime.</p>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in6.jpg" alt="Slide 6">
+                <div class="InteriorCaption">
+                    <h2>8” Display Audio with Smartphone Connectivity</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in7.jpg" alt="Slide 7">
+                <div class="InteriorCaption">
+                    <h2>Ambient Mood Lighting</h2>
+                    <p>* Hanya tersedia pada trim Prime.</p>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in8.jpg" alt="Slide 8">
+                <div class="InteriorCaption">
+                    <h2>Full Digital Cluster with 4.2” TFT LCD</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in9.jpg" alt="Slide 9">
+                <div class="InteriorCaption">
+                    <h2>Hidden Tray</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in10.jpg" alt="Slide 10">
+                <div class="InteriorCaption">
+                    <h2>Center Console Armrest</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in11.jpg" alt="Slide 11">
+                <div class="InteriorCaption">
+                    <h2>Center Console Rear Storage with USB Port</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/stargazer/s-in12.jpg" alt="Slide 12">
+                <div class="InteriorCaption">
+                    <h2>Seat Back Table</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="InteriorThumbnails">
+            <div class="thumbnail" onclick="showInteriorSlide(0)">
+                <img src="/images/stargazer/s-in1.jpg" alt="Slide 1 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(1)">
+                <img src="/images/stargazer/s-in2.jpg" alt="Slide 2 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(2)">
+                <img src="/images/stargazer/s-in3.jpg" alt="Slide 3 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(3)">
+                <img src="/images/stargazer/s-in4.jpg" alt="Slide 4 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(4)">
+                <img src="/images/stargazer/s-in5.jpg" alt="Slide 5 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(5)">
+                <img src="/images/stargazer/s-in6.jpg" alt="Slide 6 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(6)">
+                <img src="/images/stargazer/s-in7.jpg" alt="Slide 7 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(7)">
+                <img src="/images/stargazer/s-in8.jpg" alt="Slide 8 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(8)">
+                <img src="/images/stargazer/s-in9.jpg" alt="Slide 9 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(9)">
+                <img src="/images/stargazer/s-in10.jpg" alt="Slide 10 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(10)">
+                <img src="/images/stargazer/s-in11.jpg" alt="Slide 11 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(11)">
+                <img src="/images/stargazer/s-in12.jpg" alt="Slide 12 Preview">
+            </div>
+        </div>
+    </section>
+
+    <!-- Secure Section -->
+    <section class="SecureSection">
+        <div class="SecureContainer">
+            <div class="SecureTitleContainer">
+                <div class="SecureTitle">Hyundai SmartSense</div>
+                <div class="SecureSubtitle">* Fitur ini hanya tersedia di trim Essential Tech dan Prime</div>
+            </div>
+
+            <!-- Slides and Thumbnails -->
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss1.jpg" alt="Slide 1">
+                <div class="SecureCaption">
+                    <h2>Forward Collision-avoidance Assist (FCA)</h2>
+                    <p>Fitur ini memperingatkan pengemudi ketika sistem mendeteksi ada risiko benturan dari arah depan, seperti misalnya dengan pejalan kaki atau dengan kendaraan yang tiba-tiba melambat atau berhenti. Jika risiko benturan terus meningkat setelah peringatan, maka sistem secara otomatis akan membantu dengan melakukan pengereman darurat.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss2.jpg" alt="Slide 2">
+                <div class="SecureCaption">
+                    <h2>Lane Following Assist (LFA)</h2>
+                    <p>Kamera depan melacak penanda garis jalur dan membantu menjaga kendaraan tetap aman di tengah jalur.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss3.jpg" alt="Slide 3">
+                <div class="SecureCaption">
+                    <h2>High Beam Assist (HBA)</h2>
+                    <p>HBA mengubah kondisi lampu high beam menjadi low beam saat mendeteksi kendaraan yang melaju dari arah berlawanan pada malam hari. Saat kendaraan tersebut telah melewati mobil Anda, kondisi lampu akan berubah secara otomatis ke high beam.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss4.jpg" alt="Slide 4">
+                <div class="SecureCaption">
+                    <h2>Lane Keeping Assist (LKA)</h2>
+                    <p>Kamera tampak depan mendeteksi ada jalur (di tepi jalan) untuk memantau posisi kendaraan tetap pada jalur awal. Sistem akan memperingatkan pengemudi jika kendaraan tersebut meninggalkan jalur tanpa menggunakan lampu sein, dan secara otomatis akan membantu mengarahkan kemudi untuk mencegah kendaraan beralih dari jalur yang semestinya.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss5.jpg" alt="Slide 5">
+                <div class="SecureCaption">
+                    <h2>Blind-spot Collision-avoidance Assist (BCA - Dari parkir paralel)</h2>
+                    <p>BCA memonitor blind-spot Anda saat berkendara. Jika ada kendaraan lain yang terdeteksi di sekitar mobil Anda, LED pada kaca spion akan menyala memberikan peringatan. Jika ada risiko benturan dengan kendaraan di sisi samping dalam kecepatan rendah (0 - 3km/jam), seperti misalnya saat keluar dari posisi parkir paralel, sistem akan berfungsi secara otomatis membantu pengereman darurat.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss6.jpg" alt="Slide 6">
+                <div class="SecureCaption">
+                    <h2>Rear Cross-traffic Collision-avoidance Assist (RCCA)</h2>
+                    <p>RCCA memperingatkan apabila ada kendaraan di jalur belakang yang mendekat pada saat mundur dan melakukan pengereman darurat jika diperlukan.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss7.jpg" alt="Slide 7">
+                <div class="SecureCaption">
+                    <h2>Rear View Monitor (RVM)</h2>
+                    <p>Lebih aman saat mundur atau parkir, kamera belakang akan memonitor area belakang mobil.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/stargazer/ss8.jpg" alt="Slide 8">
+                <div class="SecureCaption">
+                    <h2>6-Airbag system (Driver, Passenger, Side & Curtain)</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="SecureThumbnails">
+            <div class="securethumbnail" onclick="showSecureSlide(0)">
+                <img src="/images/stargazer/ss1.jpg" alt="Slide 1 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(1)">
+                <img src="/images/stargazer/ss2.jpg" alt="Slide 2 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(2)">
+                <img src="/images/stargazer/ss3.jpg" alt="Slide 3 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(3)">
+                <img src="/images/stargazer/ss4.jpg" alt="Slide 4 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(4)">
+                <img src="/images/stargazer/ss5.jpg" alt="Slide 5 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(5)">
+                <img src="/images/stargazer/ss6.jpg" alt="Slide 6 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(6)">
+                <img src="/images/stargazer/ss7.jpg" alt="Slide 7 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(7)">
+                <img src="/images/stargazer/ss8.jpg" alt="Slide 8 Preview">
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="warranty-section">
+        <div class="section-title-container">
+            <img src="/images/bluelink.webp" alt="Blue Link">
+        </div>
+        <div class="warranty-banners">
+            <div class="warranty-banner spare-part">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>SPARE PART</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner maintenance">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>MAINTENANCE</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner warranty">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/100,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>WARRANTY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Cards Section -->
+    <section class="action-cards-section">
+        <div class="action-cards-container">
+            <div class="action-card">
+                <i class="fas fa-file-pdf"></i>
+                <h3>Download Pricelist</h3>
+                <a href="pricelist.pdf" download class="action-button">Download PDF</a>
+            </div>
+
+            <div class="action-card">
+                <i class="fas fa-car"></i>
+                <h3>Book a Test Drive</h3>
+                <a href="https://wa.me/6282175014690?text=I'd%20like%20to%20book%20a%20test%20drive" target="_blank" class="action-button">Contact via WhatsApp</a>
+            </div>
+
+            <div class="action-card">
+                <i class="fas fa-tag"></i>
+                <h3>Request an Offer</h3>
+                <a href="https://wa.me/6282175014690?text=I'm%20interested%20in%20getting%20an%20offer" target="_blank" class="action-button">Contact via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Profile Section -->
+    <section class="bio-profile-section">
+        <div class="bio-container">
+            <div class="bio-image">
+                <img src="/api/placeholder/300/300" alt="Sales Representative">
+            </div>
+            <div class="bio-content">
+                <h2>Your Personal Sales Consultant</h2>
+                <h3>Wijanarko Salim</h3>
+                <p>Sales Consultant - Hyundai Indonesia</p>
+                <div class="bio-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+6281234567890">+62 821 7501 4690</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:kekesalim9@gmail.com">kekesalim9@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/6282175014690" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Location Map Section -->
+    <section class="map-section">
+        <h2 class="section-title">Visit Our Store</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5487284718364!2d106.79091!3d-6.178691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7b66a943f1b%3A0x6e4f4f52aefdf7f!2sMall%20Taman%20Anggrek!5e0!3m2!1sen!2sid!4v1708935848673!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-details">
+                <h3>Hyundai City Store</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Taman Anggrek, Ground Floor, Unit XX</p>
+                <p><i class="fas fa-clock"></i> Opening Hours: 10:00 - 22:00 (Mon-Sun)</p>
+                <a href="https://maps.app.goo.gl/AoywNyYvF2vP8XYX8" target="_blank" class="cta-button">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Models</h4>
+                <ul>
+                    <li><a href="stargazer.html">STARGAZER</a></li>
+                    <li><a href="#">Model 2</a></li>
+                    <li><a href="#">Model 3</a></li>
+                    <li><a href="#">Model 4</a></li>
+                    <li><a href="#">All Models</a></li>
+                </ul>
+            </div>
+            <!-- Other footer columns -->
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 All rights reserved. Legal notice. Privacy policy. Cookies. Terms of use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script at the end of the body to optimize video loading -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Optimize loading screen
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.display = 'none';
+            }, 1000);
+            
+            // Intersection Observer for lazy loading videos
+            if ('IntersectionObserver' in window) {
+                const videoElement = document.querySelector('.hero-video');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (videoElement.paused) {
+                                videoElement.play();
+                            }
+                        } else {
+                            if (!videoElement.paused) {
+                                videoElement.pause();
+                            }
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                observer.observe(videoElement);
+            }
+        });
+    </script>
+</body>
+</html>
