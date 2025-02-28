@@ -10,8 +10,10 @@ body {
     color: #000;
     background-color: #fff;
     overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+    line-height: 1.6; /* Improve overall text readability */
 }
-/* Loading Screen Styles - Add to your style.css file */
+
+/* Loading Screen Styles */
 .loading-screen {
     position: fixed;
     top: 0;
@@ -32,7 +34,7 @@ body {
 
 .loading-logo {
     max-width: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduced margin for better spacing */
 }
 
 .loading-spinner {
@@ -60,6 +62,7 @@ body {
     opacity: 0;
     pointer-events: none;
 }
+
 /* Navigation */
 .top-nav {
     display: flex;
@@ -170,6 +173,7 @@ body {
     padding-right: 2rem; /* Add padding to the right */
     overflow: hidden;
 }
+
 .hero-video {
     position: absolute;
     top: 0;
@@ -198,12 +202,7 @@ body {
     z-index: 1;
     text-align: right; /* Align text to the right */
 }
-.hero-content h1,
-.hero-content p{
-    text-align: right; /* Force text alignment for all child elements */
-    display: block; /* Ensure block-level alignment */
-    width: 100%; /* Ensure full width for alignment */
-}
+
 .hero-content h1 {
     font-size: 2.2rem;
     font-weight: 300;
@@ -221,6 +220,7 @@ body {
     margin: 1rem auto; /* Add vertical margin for spacing */
     text-align: center;
 }
+
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -238,255 +238,357 @@ body {
     background-color: #000;
     color: #fff;
 }
+
 .hidden {
     display: none; /* Hide the button */
 }
-/* General Styling */
-.details-section {
-    width: 100%;
-    padding: 40px 20px;
-
-  }
-  
-  .card-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px; /* Adds space between title and subtitle */
-  }
-  
-  .details-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    flex: 1; /* Allows title to take up space */
-  }
-  
-  .details-subtitle {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-    flex: 2; /* Allows subtitle to take up more space */
-  }
-  
-  /* Responsive Design for Mobile */
-  @media (max-width: 768px) {
-    .card-section {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .details-title {
-      font-size: 28px;
-    }
-  
-    .details-subtitle {
-      font-size: 16px;
-    }
-  }
-  /* General Styling */
-.performance-section {
-    width: 100%;
-    padding: 40px 20px;
-  }
-  
-  .performance-content {
-    display: flex;
-    align-items: flex-start; /* Align items to the top */
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px;
-  }
-  
-  .performance-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .performance-text {
-    flex: 1;
-  }
-  
-  /* Flexbox for big and small text pairs */
-  .text-pair {
-    display: flex;
-    align-items: baseline; /* Align text to the baseline */
-    gap: 10px; /* Space between big and small text */
-    margin-bottom: 20px; /* Space between pairs */
-  }
-  
-  .big-text {
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .small-text {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .small-text p {
-    color: #999999;
-    text-decoration: none;
-    font-size: 12px;
-  }
-  
-  .small-text a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive Design for Mobile */
-  @media (max-width: 768px) {
-    .performance-content {
-      flex-direction: column; /* Stack image and text vertically */
-      gap: 20px;
-    }
-  
-    .performance-image img {
-      max-width: 100%;
-    }
-  
-    .text-pair {
-      flex-direction: column; /* Stack big and small text vertically on mobile */
-      gap: 5px; /* Reduce gap for mobile */
-    }
-  
-    .big-text {
-      font-size: 28px;
-    }
-  
-    .small-text {
-      font-size: 16px;
-    }
-  }
-  /* General Styling */
-.InteriorSection {
-    width: 100%;
-    padding: 40px 20px;
-  }
-  
-  .InteriorContainer {
+/* Featured Section - Slideshow */
+.featured-section {
+    padding: 2rem 1rem; /* Consistent padding */
+    text-align: center;
+}
+.featured-section-title{
+    font-size: 2rem;
+}
+.slideshow-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
-  }
-  
-  /* Interior Section - Title and Subtitle */
-.InteriorTitleContainer {
-    text-align: center; /* Center align text */
-    margin-bottom: 5rem; /* Add space below the title and subtitle */
 }
 
-.InteriorTitle {
-    font-size: 2rem; /* Adjust title font size */
-    font-weight: bold; /* Make title bold */
-    color: #333; /* Dark gray color for the title */
-    margin-bottom: 1rem; /* Space between title and subtitle */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.InteriorSubtitle {
-    font-size: 1rem; /* Adjust subtitle font size */
-    color: #666; /* Light gray color for the subtitle */
-    max-width: 600px; /* Limit subtitle width for better readability */
-    margin: 0 auto; /* Center the subtitle */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
-  .InteriorSlide {
-    display: none;
+
+.slide img {
     width: 100%;
-    text-align: center;
-  }
-  
-  .InteriorSlide img {
-    width: 100%;
-    max-width: 900px;
     height: auto;
     border-radius: 10px;
-  }
-  
-  .InteriorCaption {
-    margin-top: 20px;
-  }
-  
-  .InteriorCaption h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .InteriorCaption p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .InteriorCaption small {
-    font-size: 14px;
-    color: #999;
-  }
-  
-  .InteriorCaption a {
-    color: #0073e6;
-    text-decoration: none;
-  }
-  
-  .InteriorCaption a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Navigation Buttons */
-  .InteriorPrev, .InteriorNext {
+}
+
+/* Arrow Buttons */
+.arrow-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
-    padding: 10px;
+    color: #002167;
+    font-size: 3vh;
     cursor: pointer;
-    font-size: 18px;
-  }
-  
-  .InteriorPrev {
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.arrow-button:hover {
+    color: #555;
+}
+
+.prev-button {
     left: 10px;
-  }
-  
-  .InteriorNext {
+}
+
+.next-button {
     right: 10px;
-  }
-  
-  /* Responsive Design for Mobile */
-  @media (max-width: 768px) {
-    .InteriorCaption h2 {
-      font-size: 20px;
+}
+
+/* This class will make the image more responsive */
+.heading-sized-image {
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    max-height: 4rem; /* Smaller on mobile */
+    vertical-align: middle;
+    margin: 0.5em 0;
+    display: inline-block;
+}
+
+/* Reusable Section Component - Improved Spacing */
+.caption {
+    width: 100%; /* Slightly wider on smaller screens */
+    max-width: 1200px; /* Maximum width on large screens */
+    padding: 1rem; /* Increased padding for better spacing */
+    margin: 1rem auto; /* Increased vertical margins and centered horizontally */
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack vertically on mobile */
+    align-items: flex-start; /* Align items to the left on mobile */
+    text-align: justify;
+}
+
+.caption-title {
+    font-size: 1.75rem; /* Slightly smaller on mobile */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem; /* Increased space between title and subtitle on mobile */
+    width: 100%; /* Full width on mobile */
+}
+
+.caption-subtitle {
+    font-size: 0.95rem; /* Slightly smaller on mobile */
+    color: #666;
+    width: 100%; /* Full width on mobile */
+    line-height: 1.6;
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+    .caption {
+        padding: 3rem 2rem; /* Increased padding on larger screens */
+        margin: 0.5rem auto; /* Increased margins on larger screens */
+        flex-direction: row; /* Side by side on larger screens */
+        align-items: center; /* Center align vertically */
+        justify-content: space-between; /* Space between title and subtitle */
     }
-  
-    .InteriorCaption p {
-      font-size: 14px;
+    
+    .caption-title {
+        font-size: 2rem; /* Original size on larger screens */
+        margin-bottom: 0; /* Remove margin on larger screens */
+        width: auto; /* Auto width on larger screens */
+        text-align: left;
+        margin-right: 2rem; /* Add right margin to create space between title and subtitle */
     }
-  
-    .InteriorCaption small {
-      font-size: 12px;
+    
+    .caption-subtitle {
+        font-size: 1rem; /* Original size on larger screens */
+        max-width: 60%; /* Limit subtitle width */
+        text-align: justify;
     }
-    .InteriorPrev, .InteriorNext {
-        position: absolute;
-        top: 50%;
-        color: #fff;
-        transform: translateY(-50%);
-        background-color: transparent;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 18px;
-      }
-  }
- /* Interior Section - Thumbnails */
+}
+
+/* Media query for very large screens */
+@media (min-width: 1200px) {
+    .section {
+        padding: 4rem 2.5rem; /* Even more padding on very large screens */
+        margin: 5rem auto; /* More margin on very large screens */
+    }
+    
+    .section-title {
+        font-size: 2.2rem; /* Slightly larger title on very large screens */
+    }
+    
+    .section-subtitle {
+        max-width: 70%; /* Allow more space on very large screens */
+        font-size: 1.1rem; /* Slightly larger text on very large screens */
+    }
+}
+
+/* Performance Section */
+.performance-section {
+    width: 100%;
+    padding: 2rem 1rem; /* Consistent padding */
+}
+
+.performance-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.performance-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.performance-text {
+    flex: 1;
+}
+
+/* Flexbox for big and small text pairs */
+.text-pair {
+    display: flex;
+    align-items: baseline; /* Align text to the baseline */
+    gap: 10px; /* Space between big and small text */
+    margin-bottom: 10px; /* Space between pairs */
+}
+
+.big-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.small-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.small-text p {
+    color: #999999;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.small-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .performance-content {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 20px;
+    }
+
+    .performance-image img {
+        max-width: 100%;
+    }
+
+    .text-pair {
+        flex-direction: column; /* Stack big and small text vertically on mobile */
+        gap: 5px; /* Reduce gap for mobile */
+    }
+
+    .big-text {
+        font-size: 28px;
+    }
+
+    .small-text {
+        font-size: 16px;
+    }
+}
+
+
+/* Interior Section - Slideshow */
+.InteriorSection {
+    width: 100%;
+    padding: 2rem 1rem; /* Consistent padding */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.InteriorContainer {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%; /* Ensure full width */
+}
+
+.InteriorTitleContainer {
+    text-align: center;
+    margin-bottom: 2rem; /* Reduced from 3rem to match Secure section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.InteriorTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.InteriorSubtitle {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 1rem; /* Added margin-bottom to ensure consistent spacing */
+}
+
+.InteriorSlide {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px; /* Add some padding on sides */
+    box-sizing: border-box;
+}
+
+.InteriorSlide img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.InteriorCaption {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.InteriorCaption h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.InteriorCaption p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.InteriorCaption small {
+    font-size: 14px;
+    color: #999;
+}
+
+.InteriorCaption a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.InteriorCaption a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .InteriorSection {
+        padding: 1rem 0.5rem; /* Reduce padding on mobile */
+    }
+    
+    .InteriorContainer {
+        width: 100%;
+        padding: 0 5px; /* Add minimal padding to container */
+    }
+    
+    .InteriorSlide img {
+        width: 100%;
+        border-radius: 8px; /* Slightly smaller radius on mobile */
+    }
+    
+    .InteriorCaption {
+        padding: 0 10px; /* Add padding to caption */
+        box-sizing: border-box;
+    }
+    
+    .InteriorThumbnails {
+        padding: 0 5px; /* Add padding to thumbnails container */
+        box-sizing: border-box;
+    }
+    
+    .InteriorPrev {
+        left: 5px; /* Move closer to edge */
+    }
+    
+    .InteriorNext {
+        right: 5px; /* Move closer to edge */
+    }
+}
+
+/* Interior Section - Thumbnails */
 .InteriorThumbnails {
     display: flex;
     justify-content: center;
@@ -499,6 +601,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    margin-bottom: 3rem;
 }
 
 .thumbnail img {
@@ -516,10 +619,10 @@ body {
     transform: scale(1.2); /* Scale the image up */
 }
 
- /* Secure Section - Slideshow */
+/* Secure Section - Slideshow */
 .SecureSection {
     width: 100%;
-    padding: 40px 20px;
+    padding: 2rem 1rem; /* Consistent padding */
 }
 
 .SecureContainer {
@@ -529,26 +632,29 @@ body {
     overflow: hidden;
 }
 
-/* Secure Section - Title and Subtitle */
+/* Secure Section - Fixed Title/Subtitle Position */
 .SecureTitleContainer {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center align horizontally */
 }
 
 .SecureTitle {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Space between title and subtitle */
+    width: 100%; /* Full width */
 }
 
 .SecureSubtitle {
     font-size: 1rem;
     color: #666;
     max-width: 600px;
-    margin: 0 auto;
+    width: 100%; /* Full width up to max-width */
 }
-
 .SecureSlide {
     display: none;
     width: 100%;
@@ -564,7 +670,6 @@ body {
 
 .SecureCaption {
     margin-top: 20px;
-   
 }
 
 .SecureCaption h2 {
@@ -597,26 +702,6 @@ body {
 
 .SecureCaption a:hover {
     text-decoration: underline;
-}
-
-/* Navigation Buttons */
-.SecurePrev, .SecureNext {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.SecurePrev {
-    left: 10px;
-}
-
-.SecureNext {
-    right: 10px;
 }
 
 /* Secure Section - Thumbnails */
@@ -678,76 +763,12 @@ body {
         height: 60px;
     }
 }
-/* Featured Section - Slideshow */
-.featured-section {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
 
-/* Arrow Buttons */
-.arrow-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    color: #002167;
-    font-size: 3vh;
-    cursor: pointer;
-    padding: 10px;
-    transition: color 0.3s ease;
-}
 
-.arrow-button:hover {
-    color: #555;
-}
-
-.prev-button {
-    left: 10px;
-}
-
-.next-button {
-    right: 10px;
-}
-/* This class will make the image more responsive */
-.heading-sized-image {
-    max-width: 80%;
-    height: auto;
-    width: auto;
-    max-height: 4rem; /* Smaller on mobile */
-    vertical-align: middle;
-    margin: 0.5em 0;
-    display: inline-block;
-}
-
-/* Add this to your style.css file */
 /* Warranty Section with Blue Link logo */
 .warranty-section {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem; /* Consistent padding */
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -774,19 +795,19 @@ body {
     width: 90%;
     max-width: 280px;
     margin: 0 auto;
-  }
-  
-  .warranty-banner {
+}
+
+.warranty-banner {
     display: flex;
     height: 55px; /* Even smaller height for mobile */
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: 100%;
-  }
-  
-  /* More compact warranty years layout */
-  .warranty-years {
+}
+
+/* More compact warranty years layout */
+.warranty-years {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -795,144 +816,146 @@ body {
     background-color: #14387F; /* Updated blue color */
     color: white;
     width: 35%;
-  }
-  
-  .number {
+}
+
+.number {
     font-size: 18px; /* Smaller font size */
     font-weight: bold;
     line-height: 1;
     margin-bottom: 1px;
-  }
-  
-  .years-text {
+}
+
+.years-text {
     font-size: 9px; /* Smaller font size */
     line-height: 1.1;
     text-align: center;
-  }
-  
-  .km {
+}
+
+.km {
     font-size: 8px; /* Smaller font size */
-  }
-  
-  /* More compact warranty text area */
-  .warranty-text {
+}
+
+/* More compact warranty text area */
+.warranty-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: white;
     flex-grow: 1;
     padding: 0 6px;
-  }
-  
-  .warranty-text span:first-child {
+}
+
+.warranty-text span:first-child {
     color: #4AABC8; /* Light blue color */
     font-size: 16px; /* Smaller font size */
     font-weight: bold;
     line-height: 1;
-  }
-  
-  .warranty-text span:last-child {
+}
+
+.warranty-text span:last-child {
     color: #14387F; /* Matching blue color */
     font-size: 12px; /* Smaller font size */
     font-weight: bold;
     line-height: 1.2;
-  }
-  
-  /* For warranty banner (only one text line) */
-  .warranty-banner.warranty .warranty-text span {
+}
+
+/* For warranty banner (only one text line) */
+.warranty-banner.warranty .warranty-text span {
     color: #14387F; /* Matching blue color */
     font-size: 14px; /* Smaller font size */
-  }
-  
-  /* Banner-specific colors - updated to use solid color */
-  .spare-part, .maintenance, .warranty {
+}
+
+/* Banner-specific colors - updated to use solid color */
+.spare-part, .maintenance, .warranty {
     background-color: #14387F; /* Updated to solid blue color matching the years section */
-  }
-  
-  /* Media query for tablets and above */
-  @media (min-width: 768px) {
+}
+
+/* Media query for tablets and above */
+@media (min-width: 768px) {
     .heading-sized-image {
-      max-height: 5rem;
+        max-height: 5rem;
     }
-    
+
     .warranty-banners {
         flex-direction: row;
         justify-content: center; /* Centers the cards in the container */
         max-width: 900px; /* Set a max-width to prevent stretching too much */
         margin: 0 auto; /* Centers the container itself */
     }
-    
+
     .warranty-banner {
-      width: calc(33% - 1rem);
-      min-width: 120px;
+        width: calc(33% - 1rem);
+        min-width: 120px;
     }
-  }
-  
-  /* Media query for larger screens */
-  @media (min-width: 1024px) {
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
     .featured-section {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 3rem 4rem;
-      min-height: 50vh;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem 4rem;
+        min-height: 50vh;
     }
-    
+
     .featured-content {
-      text-align: left;
-      margin-bottom: 0;
-      max-width: 50%;
+        text-align: left;
+        margin-bottom: 0;
+        max-width: 50%;
     }
+
     .heading-sized-image {
-      max-height: 6rem;
+        max-height: 6rem;
     }
-    
+
     .warranty-banners {
         justify-content: center; /* Centers the cards in the container */
         max-width: 900px; /* Set a max-width to prevent stretching too much */
         margin: 0 auto; /* Centers the container itself */
     }
-    
+
     .warranty-banner {
-      height: 70px;
-      width: 100%;
+        height: 70px;
+        width: 100%;
     }
-    
+
     .warranty-years {
-      width: 40%;
-      padding: 0 10px;
+        width: 40%;
+        padding: 0 10px;
     }
-    
+
     .number {
-      font-size: 26px;
+        font-size: 26px;
     }
-    
+
     .years-text {
-      font-size: 13px;
+        font-size: 13px;
     }
-    
+
     .km {
-      font-size: 10px;
+        font-size: 10px;
     }
-    
+
     .warranty-text {
-      padding: 0 10px;
+        padding: 0 10px;
     }
-    
+
     .warranty-text span:first-child {
-      font-size: 22px;
+        font-size: 22px;
     }
-    
+
     .warranty-text span:last-child {
-      font-size: 16px;
+        font-size: 16px;
     }
-    
+
     .warranty-banner.warranty .warranty-text span {
-      font-size: 20px;
+        font-size: 20px;
     }
-  }
+}
+
 /* Action Cards Section */
 .action-cards-section {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem; /* Consistent padding */
     background-color: #f9f9f9;
 }
 
@@ -980,8 +1003,8 @@ body {
     transition: background-color 0.3s ease;
     width: 100%; /* Full width for better tap targets */
 }
-/* Add this to your style.css file or modify the existing action-cards-container class */
 
+/* Add this to your style.css file or modify the existing action-cards-container class */
 @media (min-width: 768px) {
     .action-cards-container {
         flex-direction: row;
@@ -998,7 +1021,7 @@ body {
 
 /* Bio Profile Section */
 .bio-profile-section {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem; /* Consistent padding */
     background-color: #fff;
 }
 
@@ -1071,6 +1094,7 @@ body {
     transition: color 0.3s ease;
     padding: 0.5rem 0; /* Larger tap target */
 }
+
 @media (min-width: 1024px) {
     .bio-container {
         flex-direction: row;
@@ -1079,20 +1103,21 @@ body {
         margin: 0 auto; /* Center the container */
         justify-content: center; /* Center the content horizontally */
     }
-    
+
     .bio-content {
         width: auto; /* Change from 100% to auto */
         max-width: 600px; /* Limit the text width */
     }
-    
+
     .bio-image {
         flex: 0 0 200px; /* Keep the image size fixed */
         margin-right: 2rem; /* Add some space between image and content */
     }
 }
+
 /* Store Location Map Section */
 .map-section {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem; /* Consistent padding */
     background-color: #f5f5f5;
 }
 
@@ -1149,12 +1174,11 @@ body {
     text-align: center;
 }
 
-
 /* Footer */
 footer {
     background-color: #000;
     color: #fff;
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem; /* Consistent padding */
 }
 
 .footer-grid {
@@ -1233,31 +1257,31 @@ footer {
     .top-nav {
         padding: 1rem 2rem;
     }
-    
+
     .logo {
         height: 40px;
     }
-    
+
     .hero-content h1 {
         font-size: 3rem;
     }
-    
+
     .hero-content p {
         font-size: 1.2rem;
     }
-    
+
     .section-title {
         font-size: 2.2rem;
     }
-    
+
     .models-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .action-cards-container {
         flex-direction: row;
     }
-    
+
     .footer-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1267,7 +1291,7 @@ footer {
     .menu-toggle {
         display: none;
     }
-    
+
     .nav-container {
         position: static;
         display: flex;
@@ -1279,99 +1303,99 @@ footer {
         margin-left: 2rem;
         width: auto;
     }
-    
+
     .nav-links {
         flex-direction: row;
         width: auto;
         margin-bottom: 0;
     }
-    
+
     .nav-links li {
         margin: 0 0 0 1.5rem;
     }
-    
+
     .nav-right {
         flex-direction: row;
         width: auto;
     }
-    
+
     .nav-right a {
         margin: 0 0 0 1.5rem;
         width: auto;
     }
-    
+
     .hero {
         padding-bottom: 6rem;
         padding-left: 4rem;
         height: 100vh;
     }
-    
+
     .hero-content {
         text-align: left;
         max-width: 600px;
     }
-    
+
     .models-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .model-card {
         height: 450px;
     }
-    
+
     .featured-section {
         flex-direction: row;
         padding: 4rem;
         min-height: 70vh;
     }
-    
+
     .featured-content {
         text-align: left;
         margin-bottom: 0;
     }
-    
+
     .action-button {
         width: auto;
     }
-    
+
     .bio-container {
         flex-direction: row;
         text-align: left;
     }
-    
+
     .bio-contacts {
         align-items: flex-start;
     }
-    
+
     .map-container {
         flex-direction: row;
     }
-    
+
     .map-container iframe {
         height: 450px;
     }
-    
+
     .map-details .cta-button {
         width: auto;
     }
-    
+
     .experience-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .experience-card .cta-button {
         width: auto;
     }
-    
+
     .footer-grid {
         grid-template-columns: repeat(5, 1fr);
     }
-    
+
     .footer-bottom {
         flex-direction: row;
         justify-content: space-between;
     }
-    
+
     .social-icons {
         margin-bottom: 0;
     }

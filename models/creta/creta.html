@@ -6,7 +6,6 @@
     <title>Hyundai Taman Anggrek</title>
     <link rel="stylesheet" href="creta.css">
     <script src="creta.js" defer></script>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -17,16 +16,14 @@
             <p>Loading experience...</p>
         </div>
     </div>
-    <!-- Navigation -->
+
     <nav class="top-nav">
         <a href="/home.html"><img class="logo" src="/images/logo.png" alt="Logo"></a>
-        
         <div class="menu-toggle" id="menuToggle">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        
         <div class="nav-container" id="navContainer">
             <ul class="nav-links">
                 <li><a href="/home.html">Models</a></li>
@@ -35,29 +32,27 @@
                 <li><a href="#">blabla</a></li>
                 <li><a href="#">blabla</a></li>
             </ul>
-            
             <div class="nav-right">
-                
                 <a href="#location">Location</a>
                 <a href="/home.html">Home</a>
             </div>
         </div>
     </nav>
-    
-    <!-- Hero Section with Video Background -->
+
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="creta.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
-            <h1 id="models">The New CRETA</h1>
+            <h1>The New CRETA</h1>
             <p>Be Unstoppable</p>
             <a href="#" class="cta-button">Explore Models</a>
         </div>
     </section>
-<!-- Featured Section - Slideshow -->
+
+        <!-- Featured Section - Slideshow -->
 <section class="featured-section">
-    <h2 class="section-title">The New CRETA Exterior</h2>
+    <h2 class="featured-section-title">The new CRETA</h2>
     <div class="slideshow-container">
         <!-- Slides -->
         <div class="slides">
@@ -83,54 +78,57 @@
         <button class="arrow-button next-button">&gt;</button>
     </div>
 </section>
-       <!-- bold design -->
-<section class="details-section">
-    <div class="card-section">
-        <div class="details-title">Bold Design</div>
-        <div class="details-subtitle">New CRETA hadir dengan desain eksterior yang memadukan kesan berani dan modern dengan Black Chrome Parametric Radiator Grille, LED MFR, Daytime Running Light (DRL) memperkuat kesan dinamis dan memberikan penampilan yang mencolok di jalan.</div>
-      </div>
-</section>
 
-       <!-- bold design -->
-       <section class="details-section">
-        <div class="card-section">
-            <div class="details-title">Melaju Tanpa Batas</div>
-            <div class="details-subtitle">Performa turbo New CRETA mengandalkan mesin Smartstream 1.5T-GDi dengan 7-speed DCT (dual-clutch transmission) dan Drive Mode yang dapat menyesuaikan gaya berkendara yang Anda inginkan.</div>
-          </div>
-    </section>
-    
-       <!-- preformance section -->
-       <section class="performance-section">
+    <!-- Reusable Section Component -->
+    <div class="caption">
+        <div class="caption-title">Bold Design</div>
+        <div class="caption-subtitle">New CRETA hadir dengan desain eksterior yang memadukan kesan berani dan modern dengan Black Chrome Parametric Radiator Grille, LED MFR, Daytime Running Light (DRL) memperkuat kesan dinamis dan memberikan penampilan yang mencolok di jalan.</div>
+    </div>
+
+    <div class="caption">
+        <div class="caption-title">Melaju Tanpa Batas</div>
+        <div class="caption-subtitle">Performa turbo New CRETA mengandalkan mesin Smartstream 1.5T-GDi dengan 7-speed DCT (dual-clutch transmission) dan Drive Mode yang dapat menyesuaikan gaya berkendara yang Anda inginkan.</div>
+    </div>
+
+    <!-- Performance Section -->
+    <section class="performance-section">
         <div class="performance-content">
-          <div class="performance-image">
-            <img src="/images/c1.jpg" alt="Performance Image">
-          </div>
-          <div class="performance-text">
-            <div class="big-text">117,5 kW (160 PS) / 5.500rpm</div>
-            <div class="small-text">Maksimum power*</div>
-            <div class="big-text">253 Nm / 1.500 ~ 3.500rpm</div>
-            <div class="small-text">Maksimum torsi*</div>
-            <div class="small-text"><p>* Hanya tersedia pada trim N Line Turbo.</p></div>
-            <div class="big-text">84,4 kW (115 PS) / 6.300rpm</div>
-            <div class="small-text">Maksimum power*</div>
-            <div class="big-text">143,8 Nm / 4.500rpm</div>
-            <div class="small-text">Maksimum torsi*</div>
-          </div>
+            <div class="performance-image">
+                <img src="/images/c1.jpg" alt="Performance Image">
+            </div>
+            <div class="performance-text">
+                <div class="text-pair">
+                    <div class="big-text">117,5 kW (160 PS) / 5.500rpm</div>
+                    <div class="small-text">Maksimum power*</div>
+                </div>
+                <div class="text-pair">
+                    <div class="big-text">253 Nm / 1.500 ~ 3.500rpm</div>
+                    <div class="small-text">Maksimum torsi*</div>
+                </div>
+                <div class="small-text"><p>* Hanya tersedia pada trim N Line Turbo.</p></div>
+                <div class="text-pair">
+                    <div class="big-text">84,4 kW (115 PS) / 6.300rpm</div>
+                    <div class="small-text">Maksimum power*</div>
+                </div>
+                <div class="text-pair">
+                    <div class="big-text">143,8 Nm / 4.500rpm</div>
+                    <div class="small-text">Maksimum torsi*</div>
+                </div>
+            </div>
         </div>
-      </section>
-       <!-- bold design -->
-    <section class="details-section">
-        <div class="card-section">
-            <div class="details-title">Smartstream 1.5GDi</div>
-            <div class="details-subtitle">Berbekal mesin Smartstream 1.5L dengan sistem Intelligent Variable Transmission (IVT) hasilkan performa tangguh, responsif, serta efisien. Juga dilengkapi fitur Drive Mode untuk pilihan gaya berkendara yang paling sesuai untuk Anda.</div>
     </section>
 
-      <section class="performance-section">
+    <div class="caption">
+        <div class="caption-title">Smartstream 1.5GDi</div>
+        <div class="caption-subtitle">Berbekal mesin Smartstream 1.5L dengan sistem Intelligent Variable Transmission (IVT) hasilkan performa tangguh, responsif, serta efisien. Juga dilengkapi fitur Drive Mode untuk pilihan gaya berkendara yang paling sesuai untuk Anda.</div>
+    </div>
+
+    <section class="performance-section">
         <div class="performance-content">
           <div class="performance-text">
             <!-- Pair 1 -->
             <div class="text-pair">
-              <div class="big-text">N Line exclusive seats</div>
+              <div class="big-text">N Line Exclusive Seats</div>
               <div class="small-text">Tampil dengan desain eksklusif N Line yang menambah sentuhan sporty pada New CRETA.</div>
             </div>
           </div>
@@ -139,25 +137,26 @@
             <img src="/images/c-seat.jpg" alt="Performance Image">
           </div>
         </div>
-      </section>
-
-      <section class="InteriorSection">
+    </section>
+  
+    <!-- Interior Section -->
+    <section class="InteriorSection">
         <div class="InteriorContainer">
-             <!-- Title and Subtitle -->
-        <div class="InteriorTitleContainer">
-            <h2 class="InteriorTitle">Interior Features</h2>
-            <p class="InteriorSubtitle">Dengan desain interior yang luas dan nyaman, dilengkapi fitur canggih agar setiap perjalanan Anda semakin nyaman untuk meraih setiap misi</p>
+            <div class="InteriorTitleContainer">
+                <div class="InteriorTitle">Interior Features</div>
+                <div class="InteriorSubtitle">Dengan desain interior yang luas dan nyaman, dilengkapi fitur canggih agar setiap perjalanan Anda semakin nyaman untuk meraih setiap misi</div>
+            </div>
         </div>
-            <!-- Slides -->
+    </section>
+
+            <!-- Slides and Thumbnails -->
             <div class="InteriorSlide">
                 <img src="/images/c-in1.png" alt="Slide 1">
                 <div class="InteriorCaption">
                     <h2>Panoramic Integrated Display</h2>
-                    <!-- <p>The Off-road Design Package, painted in exterior color or in Vesuvius Grey, increases the anti-pattern of conquering uncharted terrain.</p>
-                    <small>¹ Optically available.</small> -->
                 </div>
             </div>
-    
+
             <div class="InteriorSlide">
                 <img src="/images/c-in2.png" alt="Slide 2">
                 <div class="InteriorCaption">
@@ -165,7 +164,7 @@
                     <p>Hanya tersedia pada trim Style, Prime (Orange) dan N Line (Merah)</p>
                 </div>
             </div>
-    
+
             <div class="InteriorSlide">
                 <img src="/images/c-in3.png" alt="Slide 3">
                 <div class="InteriorCaption">
@@ -173,12 +172,12 @@
                     <p>Hanya tersedia pada trim Prime dan N Line</p>
                 </div>
             </div>
-            
+
             <div class="InteriorSlide">
                 <img src="/images/c-in4.png" alt="Slide 4">
                 <div class="InteriorCaption">
                     <h2>Power Tailgate</h2>
-                    <p>Power tailgate dirancang untuk meberikan kemudahan bagi Anda. Cukup tekan tombol, pintu bagasi akan terbuka secara otomatis</p>
+                    <p>Power tailgate dirancang untuk memberikan kemudahan bagi Anda. Cukup tekan tombol, pintu bagasi akan terbuka secara otomatis.</p>
                 </div>
             </div>
 
@@ -186,7 +185,7 @@
                 <img src="/images/c-in5.png" alt="Slide 5">
                 <div class="InteriorCaption">
                     <h2>Front-row Ventilated Seats</h2>
-                    <p>Selalu nyaman di kondisi udara panas ataupun dingin. Kursi pertama New CRETA dilengkapi dengan elemen pendingin yang dapat Anda atur agar berkendara lebih menyenangkan</p>
+                    <p>Selalu nyaman di kondisi udara panas ataupun dingin. Kursi pertama New CRETA dilengkapi dengan elemen pendingin yang dapat Anda atur agar berkendara lebih menyenangkan.</p>
                 </div>
             </div>
 
@@ -194,7 +193,7 @@
                 <img src="/images/c-in6.png" alt="Slide 6">
                 <div class="InteriorCaption">
                     <h2>BOSE Premium Audio System</h2>
-                    <p>New CRETA dilengkapi dengan BOSE, dirancang untuk menciptakan audio yang imersif, membuat Anda merasa seolah-olah berada di pusat pertunjukan</p>
+                    <p>New CRETA dilengkapi dengan BOSE, dirancang untuk menciptakan audio yang imersif, membuat Anda merasa seolah-olah berada di pusat pertunjukan.</p>
                 </div>
             </div>
 
@@ -202,15 +201,16 @@
                 <img src="/images/c-in7.png" alt="Slide 7">
                 <div class="InteriorCaption">
                     <h2>Console Armrest with Air Purifier</h2>
-                    <p>Kenyamanan ekstra sambil menjaga kualitas udara di sekitar Anda tetap bersih dan segar. Dilengkapi dengan teknologi pemberish udara canggih, menjadikan setiap perjalanan lebih sehat dan menyenangkan</p>
+                    <p>Kenyamanan ekstra sambil menjaga kualitas udara di sekitar Anda tetap bersih dan segar. Dilengkapi dengan teknologi pembersih udara canggih, menjadikan setiap perjalanan lebih sehat dan menyenangkan.</p>
                 </div>
             </div>
+
             <!-- Navigation Buttons -->
             <button class="InteriorPrev" onclick="moveInteriorSlide(-1)">&#10094;</button>
             <button class="InteriorNext" onclick="moveInteriorSlide(1)">&#10095;</button>
         </div>
-    
-        <!-- Small Image Previews -->
+
+        <!-- Thumbnails -->
         <div class="InteriorThumbnails">
             <div class="thumbnail" onclick="showInteriorSlide(0)">
                 <img src="/images/c-in1.png" alt="Slide 1 Preview">
@@ -236,15 +236,15 @@
         </div>
     </section>
 
+    <!-- Secure Section -->
     <section class="SecureSection">
         <div class="SecureContainer">
-            <!-- Title and Subtitle -->
             <div class="SecureTitleContainer">
-                <h2 class="SecureTitle">Hyundai SmartSense</h2>
-                <p class="SecureSubtitle">* Feature only available on Prime and N Line trim</p>
+                <div class="SecureTitle">Hyundai SmartSense</div>
+                <div class="SecureSubtitle">* Feature only available on Prime and N Line trim</div>
             </div>
-            
-            <!-- Slides -->
+
+            <!-- Slides and Thumbnails -->
             <div class="SecureSlide">
                 <img src="/images/c-s1.png" alt="Slide 1">
                 <div class="SecureCaption">
@@ -252,7 +252,7 @@
                     <p>Fitur ini memperingatkan pengemudi ketika sistem mendeteksi ada risiko benturan dari arah depan atau saat ingin berbelok ke kanan, seperti misalnya dengan pejalan kaki atau dengan kendaraan yang tiba-tiba melambat atau berhenti.</p>
                 </div>
             </div>
-            
+
             <div class="SecureSlide">
                 <img src="/images/c-s2.png" alt="Slide 2">
                 <div class="SecureCaption">
@@ -260,7 +260,7 @@
                     <p>Atur kecepatan kendaraan tanpa menginjak pedal gas yang dapat menyesuaikan jarak kendaraan di depannya. Jika kendaraan di depan berhenti, mobil akan otomatis mengurangi kecepatan sampai berhenti.</p>
                 </div>
             </div>
-            
+
             <div class="SecureSlide">
                 <img src="/images/c-s3.png" alt="Slide 3">
                 <div class="SecureCaption">
@@ -268,15 +268,15 @@
                     <p>BCA memonitor blind-spot Anda saat berkendara. Jika ada kendaraan lain yang terdeteksi di sekitar mobil Anda, LED pada kaca spion akan menyala memberikan peringatan. Jika ada risiko benturan dengan kendaraan di sisi samping dalam kecepatan rendah (0 - 3km/jam), seperti misalnya saat keluar dari posisi parkir paralel, sistem akan berfungsi secara otomatis membantu pengereman darurat.</p>
                 </div>
             </div>
-            
+
             <div class="SecureSlide">
                 <img src="/images/c-s4.jpg" alt="Slide 4">
                 <div class="SecureCaption">
                     <h2>Blind-spot View Monitor (BVM)</h2>
-                    <p>Dengan menyalakan lampu sein kiri atau kanan akan mengaktifkan Blind-Spot View Monitor (BVM), yang memantau titik buta dan memproyeksikan kondisi secara real-time pada tampilan metercluster.</p>
+                    <p>Dengan menyalakan lampu sein kiri atau kanan akan mengaktifkan Blind-Spot View Monitor (BVM), yang memantau titik buta dan memproyeksikan kondisi secara real-time pada tampilan meter cluster.</p>
                 </div>
             </div>
-            
+
             <div class="SecureSlide">
                 <img src="/images/c-s5.png" alt="Slide 5">
                 <div class="SecureCaption">
@@ -284,13 +284,13 @@
                     <p>Memperingatkan apabila ada kendaraan di jalur belakang yang mendekat pada saat mundur dan melakukan pengereman darurat jika diperlukan.</p>
                 </div>
             </div>
-            
+
             <!-- Navigation Buttons -->
             <button class="SecurePrev" onclick="moveSecureSlide(-1)">&#10094;</button>
             <button class="SecureNext" onclick="moveSecureSlide(1)">&#10095;</button>
         </div>
-        
-        <!-- Small Image Previews -->
+
+        <!-- Thumbnails -->
         <div class="SecureThumbnails">
             <div class="securethumbnail" onclick="showSecureSlide(0)">
                 <img src="/images/c-s1.png" alt="Slide 1 Preview">
@@ -309,55 +309,55 @@
             </div>
         </div>
     </section>
-<!-- Warranty Banners Section -->
-<section class="warranty-section">
-    <div class="section-title-container">
-        <img src="/images/bluelink.webp" alt="Blue Link">
-    </div>
-    <div class="warranty-banners">
-        <div class="warranty-banner spare-part">
-            <div class="warranty-years">
-                <span class="number">3+1</span>
-                <div class="years-text">
-                    Years<br>
-                    <span class="km">/60,000 Km</span>
-                </div>
-            </div>
-            <div class="warranty-text">
-                <span>FREE</span>
-                <span>SPARE PART</span>
-            </div>
-        </div>
-        
-        <div class="warranty-banner maintenance">
-            <div class="warranty-years">
-                <span class="number">3+1</span>
-                <div class="years-text">
-                    Years<br>
-                    <span class="km">/60,000 Km</span>
-                </div>
-            </div>
-            <div class="warranty-text">
-                <span>FREE</span>
-                <span>MAINTENANCE</span>
-            </div>
-        </div>
-        
-        <div class="warranty-banner warranty">
-            <div class="warranty-years">
-                <span class="number">3+1</span>
-                <div class="years-text">
-                    Years<br>
-                    <span class="km">/100,000 Km</span>
-                </div>
-            </div>
-            <div class="warranty-text">
-                <span>WARRANTY</span>
-            </div>
-        </div>
-    </div>
-</section>
 
+    <!-- Warranty Section -->
+    <section class="warranty-section">
+        <div class="section-title-container">
+            <img src="/images/bluelink.webp" alt="Blue Link">
+        </div>
+        <div class="warranty-banners">
+            <div class="warranty-banner spare-part">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>SPARE PART</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner maintenance">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>MAINTENANCE</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner warranty">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/100,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>WARRANTY</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Action Cards Section -->
     <section class="action-cards-section">
@@ -367,21 +367,21 @@
                 <h3>Download Pricelist</h3>
                 <a href="pricelist.pdf" download class="action-button">Download PDF</a>
             </div>
-            
+
             <div class="action-card">
                 <i class="fas fa-car"></i>
                 <h3>Book a Test Drive</h3>
                 <a href="https://wa.me/6282175014690?text=I'd%20like%20to%20book%20a%20test%20drive" target="_blank" class="action-button">Contact via WhatsApp</a>
             </div>
-            
+
             <div class="action-card">
                 <i class="fas fa-tag"></i>
                 <h3>Request an Offer</h3>
-                <a href="https://wa.me/6282175014690?text=I'm%20interested%20in%20getting%20an%20offer" target="_blank" class="action-button" id="sales">Contact via WhatsApp</a>
+                <a href="https://wa.me/6282175014690?text=I'm%20interested%20in%20getting%20an%20offer" target="_blank" class="action-button">Contact via WhatsApp</a>
             </div>
         </div>
     </section>
-    
+
     <!-- Bio Profile Section -->
     <section class="bio-profile-section">
         <div class="bio-container">
@@ -403,7 +403,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/6282175014690" target="_blank" id="location">WhatsApp</a>
+                        <a href="https://wa.me/6282175014690" target="_blank">WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -422,8 +422,8 @@
                 <a href="https://maps.app.goo.gl/AoywNyYvF2vP8XYX8" target="_blank" class="cta-button">Get Directions</a>
             </div>
         </div>
-    </section> 
-    <!-- Footer -->
+    </section>
+
     <footer>
         <div class="footer-grid">
             <div class="footer-column">
@@ -436,52 +436,8 @@
                     <li><a href="#">All Models</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-column">
-                <h4>Shopping Tools</h4>
-                <ul>
-                    <li><a href="#">Build & Price</a></li>
-                    <li><a href="#">Compare Models</a></li>
-                    <li><a href="#">Find a Dealer</a></li>
-                    <li><a href="#">Current Offers</a></li>
-                    <li><a href="#">Certified Pre-Owned</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Ownership</h4>
-                <ul>
-                    <li><a href="#">Owner's Portal</a></li>
-                    <li><a href="#">Service & Maintenance</a></li>
-                    <li><a href="#">Genuine Parts</a></li>
-                    <li><a href="#">Warranty</a></li>
-                    <li><a href="#">Roadside Assistance</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Experience</h4>
-                <ul>
-                    <li><a href="#">Driving Academy</a></li>
-                    <li><a href="#">Museum</a></li>
-                    <li><a href="#">Motorsports</a></li>
-                    <li><a href="#">Events & Racing</a></li>
-                    <li><a href="#">Factory Delivery</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>About</h4>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
+            <!-- Other footer columns -->
         </div>
-        
         <div class="footer-bottom">
             <div class="social-icons">
                 <a href="#">Facebook</a>
@@ -490,7 +446,6 @@
                 <a href="#">YouTube</a>
                 <a href="#">LinkedIn</a>
             </div>
-            
             <div class="copyright">
                 <p>© 2025 All rights reserved. Legal notice. Privacy policy. Cookies. Terms of use.</p>
             </div>

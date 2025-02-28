@@ -131,8 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentSlide);
 });
 let interiorSlideIndex = 0;
+let interiorSlideInterval; // Variable to store the interval for interior slideshow
 
-// Function to move slides manually
+// Function to move slides for Interior section
 function moveInteriorSlide(n) {
     const slides = document.querySelectorAll(".InteriorSlide");
     const thumbnails = document.querySelectorAll(".thumbnail");
@@ -157,19 +158,25 @@ function moveInteriorSlide(n) {
     thumbnails[interiorSlideIndex].classList.add("active");
 }
 
-// Function to show a specific slide when clicking on a thumbnail
+// Function to automatically advance Interior slides
+function autoplayInteriorSlides() {
+    moveInteriorSlide(1);
+}
+
+// Function to show a specific Interior slide when clicking on a thumbnail
 function showInteriorSlide(index) {
     interiorSlideIndex = index;
     moveInteriorSlide(0); // Call moveInteriorSlide with 0 to update the display
+    
+    // Reset the autoplay timer when manually changing slides
+    clearInterval(interiorSlideInterval);
+    interiorSlideInterval = setInterval(autoplayInteriorSlides, 3000); // Restart autoplay
 }
 
-// Initialize the slider
-document.addEventListener('DOMContentLoaded', function () {
-    moveInteriorSlide(0); // Show the first slide and activate the first thumbnail
-});
 let secureSlideIndex = 0;
+let secureSlideInterval; // Variable to store the interval for secure slideshow
 
-// Function to move slides manually
+// Function to move slides for Secure section
 function moveSecureSlide(n) {
     const slides = document.querySelectorAll(".SecureSlide");
     const thumbnails = document.querySelectorAll(".securethumbnail");
@@ -194,13 +201,59 @@ function moveSecureSlide(n) {
     thumbnails[secureSlideIndex].classList.add("active");
 }
 
-// Function to show a specific slide when clicking on a thumbnail
-function showSecureSlide(index) {
-    secureSlideIndex = index;
-    moveSecureSlide(0); // Call moveInteriorSlide with 0 to update the display
+// Function to automatically advance Secure slides
+function autoplaySecureSlides() {
+    moveSecureSlide(1);
 }
 
-// Initialize the slider
+// Function to show a specific Secure slide when clicking on a thumbnail
+function showSecureSlide(index) {
+    secureSlideIndex = index;
+    moveSecureSlide(0); // Call moveSecureSlide with 0 to update the display
+    
+    // Reset the autoplay timer when manually changing slides
+    clearInterval(secureSlideInterval);
+    secureSlideInterval = setInterval(autoplaySecureSlides, 3000); // Restart autoplay
+}
+
+// Initialize both sliders with autoplay
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Interior slider
+    moveInteriorSlide(0); // Show the first slide and activate the first thumbnail
+    interiorSlideInterval = setInterval(autoplayInteriorSlides, 3000); // Auto advance every 5 seconds
+    
+    // Initialize Secure slider
     moveSecureSlide(0); // Show the first slide and activate the first thumbnail
+    secureSlideInterval = setInterval(autoplaySecureSlides, 3000); // Auto advance every 5 seconds
+    
+    // Pause autoplay when hovering over the sliders
+    const interiorContainer = document.querySelector(".InteriorContainer");
+    if (interiorContainer) {
+        interiorContainer.addEventListener("mouseenter", function() {
+            clearInterval(interiorSlideInterval);
+        });
+        
+        interiorContainer.addEventListener("mouseleave", function() {
+            interiorSlideInterval = setInterval(autoplayInteriorSlides, 3000);
+        });
+    }
+    
+    const secureContainer = document.querySelector(".SecureContainer");
+    if (secureContainer) {
+        secureContainer.addEventListener("mouseenter", function() {
+            clearInterval(secureSlideInterval);
+        });
+        
+        secureContainer.addEventListener("mouseleave", function() {
+            secureSlideInterval = setInterval(autoplaySecureSlides, 3000);
+        });
+    }
+    
+    // Remove arrow buttons from the DOM if they exist
+    const arrowButtons = document.querySelectorAll(".InteriorPrev, .InteriorNext, .SecurePrev, .SecureNext");
+    arrowButtons.forEach(button => {
+        if (button) {
+            button.remove();
+        }
+    });
 });

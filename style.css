@@ -164,10 +164,10 @@ body {
     height: 90vh;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end; /* Align content to the bottom */
+    justify-content: flex-end; /* Align content to the right */
     padding-bottom: 3rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-right: 2rem; /* Add padding to the right */
     overflow: hidden;
 }
 
@@ -192,12 +192,13 @@ body {
     z-index: -1;
 }
 
+
 .hero-content {
-    width: 100%;
+    width: auto; /* Adjust width to fit content */
     color: #fff;
     position: relative;
     z-index: 1;
-    text-align: center; /* Center text on mobile */
+    text-align: right; /* Align text to the right */
 }
 
 .hero-content h1 {
@@ -210,6 +211,13 @@ body {
 .hero-content p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    text-align: end;
+}
+
+.hero-content .cta-button {
+    display: block;
+    margin: 1rem 0 1rem auto; /* Right aligned by default */
+    text-align: center;
 }
 
 .cta-button {
@@ -223,6 +231,7 @@ body {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     border-radius: 3px; /* Added for better tap areas */
+    width: 60%;
 }
 
 .cta-button:hover {
@@ -311,6 +320,7 @@ body {
     display: inline-block;
     padding: 0.6rem 1.25rem;
     font-size: 0.8rem;
+    text-align: center;
 }
 
 /* Featured section with large image */
