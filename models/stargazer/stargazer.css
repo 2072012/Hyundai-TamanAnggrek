@@ -279,32 +279,74 @@ body {
     border-radius: 10px;
 }
 
-/* Arrow Buttons */
-.arrow-button {
+ /* Arrow Buttons */
+ .arrow-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
-    color: #002167;
+    color: #000;
     font-size: 3vh;
     cursor: pointer;
     padding: 10px;
     transition: color 0.3s ease;
-}
-
-.arrow-button:hover {
-    color: #555;
-}
-
-.prev-button {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cdcdcd45;
+    border-radius: 8px;
+  }
+  
+  .arrow-button:hover {
+    background-color:#8989897a;
+  }
+  
+  .prev-button {
     left: 10px;
-}
-
-.next-button {
+  }
+  
+  .next-button {
     right: 10px;
-}
-
+  }
+  
+  .arrow-button svg {
+    width: 24px;
+    height: 24px;
+  }
+ /* Mobile Responsive Styles */
+ @media screen and (max-width: 768px) {
+    .arrow-button {
+      width: 40px;
+      height: 40px;
+      font-size: 2vh;
+      padding: 6px;
+    }
+  }
+  
+  /* Small Mobile Styles */
+  @media screen and (max-width: 480px) {
+    .arrow-button {
+      width: 30px;
+      height: 30px;
+      font-size: 1.5vh;
+      padding: 4px;
+    }
+    
+    .prev-button {
+      left: 5px;
+    }
+    
+    .next-button {
+      right: 5px;
+    }
+  }
+     /* Hide buttons when needed */
+     .hidden {
+        display: none;
+      }
 /* This class will make the image more responsive */
 .heading-sized-image {
     max-width: 80%;
