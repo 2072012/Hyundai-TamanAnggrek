@@ -452,5 +452,34 @@
             </div>
         </div>
     </footer>
+        <!-- Add this script at the end of the body to optimize video loading -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Optimize loading screen
+                setTimeout(function() {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 1000);
+                
+                // Intersection Observer for lazy loading videos
+                if ('IntersectionObserver' in window) {
+                    const videoElement = document.querySelector('.hero-video');
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                if (videoElement.paused) {
+                                    videoElement.play();
+                                }
+                            } else {
+                                if (!videoElement.paused) {
+                                    videoElement.pause();
+                                }
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    observer.observe(videoElement);
+                }
+            });
+        </script>
 </body>
 </html>
