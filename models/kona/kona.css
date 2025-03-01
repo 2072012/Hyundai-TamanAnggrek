@@ -578,6 +578,7 @@ body {
     .kona-feature-image,
     .kona-feature-text {
       width: 100%;
+      border-radius: 8px;
     }
   }
 
