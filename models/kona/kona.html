@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai Kona</title>
+    <link rel="stylesheet" href="kona.css">
+    <script src="kona.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="/images/logo.png" alt="Hyundai Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p>Loading experience...</p>
+        </div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="/home.html"><img class="logo" src="/images/logo.png" alt="Logo"></a>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-container" id="navContainer">
+            <ul class="nav-links">
+                <li><a href="/home.html">Models</a></li>
+                <li><a href="kona.html">KONA</a></li>
+                <li><a href="#">blabla</a></li>
+                <li><a href="#">blabla</a></li>
+                <li><a href="#">blabla</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#location">Location</a>
+                <a href="/home.html">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <!-- Optimized video loading with lazy loading and poster image -->
+        <video class="hero-video" autoplay muted loop playsinline poster="/images/kona/kona-model.png" loading="lazy">
+            <source src="kona.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 id="models">The All-New Kona Electric</h1>
+            <p>Your Feature Playground</p>
+            <a href="#" class="cta-button">Explore Models</a>
+        </div>
+    </section>
+
+    <!-- Featured Section - Slideshow -->
+    <section class="featured-section">
+        <h2 class="featured-section-title">The New KONA</h2>
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="slides">
+                <div class="slide">
+                    <img src="/images/kona/k1.png" alt="KONA Image 1">
+                </div>
+                <div class="slide">
+                    <img src="/images/kona/k2.png" alt="KONA Image 2">
+                </div>
+                <div class="slide">
+                    <img src="/images/kona/k3.png" alt="KONA Image 3">
+                </div>
+                <div class="slide">
+                    <img src="/images/kona/k4.png" alt="KONA Image 4">
+                </div>
+                <div class="slide">
+                    <img src="/images/kona/k5.png" alt="KONA Image 5">
+                </div>
+            </div>
+
+            <!-- Arrow Buttons -->
+            <button class="arrow-button prev-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+            </button>
+            <button class="arrow-button next-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Reusable Section Component -->
+    <div class="InteriorTitleContainer">
+        <div class="InteriorTitle">Your future playground</div>
+    </div>
+
+    <div class="caption">
+        <div class="caption-title">Desain futuristik yang berkelas</div>
+        <div class="caption-subtitle">The all-new KONA electric menampilkan desain eksterior yang futuristik serta diperkaya dengan pixelated graphic memberikan sentuhan berkelas di setiap perjalanan yang Anda tuju</div>
+    </div>
+
+    <div class="caption">
+        <div class="caption-title">Keseruan tanpa batas di setiap eksplorasi</div>
+        <div class="caption-subtitle">Perjalanan lebih menyenangkan bersama the all-new KONA Electric dengan beragam fitur digital dengan teknologi terkini</div>
+    </div>
+
+    <!-- Performance Section -->
+    <section class="performance-section">
+        <div class="performance-content">
+            <div class="performance-image">
+                <img src="/images/kona/k1.png" alt="Performance Image">
+            </div>
+            <div class="performance-text">
+                <div class="text-pair">
+                    <div class="big-text">448 km</div>
+                    <div class="small-text">Style Standard Range</div>
+                    <div class="big-text">448 km</div>
+                    <div class="small-text">Prime Standard Range</div>
+                </div>
+                <div class="text-pair">
+                    <div class="big-text">602 km</div>
+                    <div class="small-text">Prime Long Range</div>
+                    <div class="big-text">549 km</div>
+                    <div class="small-text">Signature Long Range</div>
+                </div>
+                <div class="text-pair">
+                    <div class="big-text">448 km</div>
+                    <div class="small-text">Signature Standard Range</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performance-section">
+        <div class="performance-content">
+          <div class="performance-text">
+            <!-- Pair 1 -->
+            <div class="text-pair">
+              <div class="big-text">Miliki the All-New KONA Electric sekarang</div>
+              <div class="small-text">* Gratis EV Public Charging Service selama 1 tahun
+            </div>
+            </div>
+          </div>
+          <div class="performance-image">
+            <img src="/images/kona/k-in.png" alt="Performance Image">
+          </div>
+        </div>
+    </section>
+
+    <section class="kona-feature-section">
+        <!-- First Feature Row -->
+        <div class="kona-feature-row">
+          <div class="kona-feature-image">
+            <img src="/images/kona/k-inn.jpg" alt="Drive Mode Feature">
+          </div>
+          <div class="kona-feature-text">
+            <div class="kona-feature-title">Drive Mode</div>
+            <div class="kona-feature-description"><!-- Add description here if needed --></div>
+          </div>
+        </div>
+        
+        <!-- Second Feature Row (image on right) -->
+        <div class="kona-feature-row image-right">
+          <div class="kona-feature-image">
+            <img src="/images/kona/k-innn.jpg" alt="Shift-by-Wire Feature">
+          </div>
+          <div class="kona-feature-text">
+            <div class="kona-feature-title" style="text-align: right;">Shift-by-Wire</div>
+            <div class="kona-feature-description"><!-- Add description here if needed --></div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Interior Section -->
+    <section class="InteriorSection">
+        <div class="InteriorContainer">
+            <div class="InteriorTitleContainer">
+                <div class="InteriorTitle">Interior Features</div>
+                <div class="InteriorSubtitle">Dengan desain interior yang luas dan nyaman, dilengkapi fitur canggih agar setiap perjalanan Anda semakin nyaman untuk meraih setiap misi</div>
+            </div>
+
+            <!-- Slides and Thumbnails -->
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in1.jpg" alt="Slide 1">
+                <div class="InteriorCaption">
+                    <h2>Ambient Lighting</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in2.jpg" alt="Slide 2">
+                <div class="InteriorCaption">
+                    <h2>Sunroof</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in3.jpg" alt="Slide 3">
+                <div class="InteriorCaption">
+                    <h2>Convenient Center Console Storage</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in4.jpg" alt="Slide 4">
+                <div class="InteriorCaption">
+                    <h2>Connected Car Navigation Cockpit (ccNC)</h2>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in5.jpg" alt="Slide 5">
+                <div class="InteriorCaption">
+                    <h2>Front Trunk</h2>
+                    <p>Simpan barang-barang ringanmu dengan praktis di kompartemen bawah kap mesin</p>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in6.jpg" alt="Slide 6">
+                <div class="InteriorCaption">
+                    <h2>BOSE Premium Audio System</h2>
+                    <p>Nikmati suara berkualitas tinggi dengan sistem audio BOSE premium, dengan 8 speaker dan amplifier eksternal</p>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in7.jpg" alt="Slide 7">
+                <div class="InteriorCaption">
+                    <h2>2nd Row 2 Level Latch</h2>
+                    <p>Kursi baris kedua yang dapat direbahkan, memberikan kenyamanan lebih bagi penumpang untuk perjalanan jauh, dilengkapi lantai datar yang berikan ruang untuk penumpang bergerak bebas</p>
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in8.jpg" alt="Slide 8">
+                <div class="InteriorCaption">
+                    <h2>Vehicle-to-Load (V2L)</h2>
+                    <p>Fitur outdoor V2L dapat mendukung beragam perangkat elektronik di luar kendaraan dengan daya maksimum hingga 3kW</p>
+                </div>
+            </div>
+
+
+            <div class="InteriorSlide">
+                <img src="/images/kona/k-in9.jpg" alt="Slide 9">
+                <div class="InteriorCaption">
+                    <h2>Indoor V2L</h2>
+                    <p>V2L yang terletak di bawah konsol tengah belakang memungkinkan pemakaian alat elektronik dalam kendaraan tanpa khawatir soal baterai.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="InteriorThumbnails">
+            <div class="thumbnail" onclick="showInteriorSlide(0)">
+                <img src="/images/kona/k-in1.jpg" alt="Slide 1 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(1)">
+                <img src="/images/kona/k-in2.jpg" alt="Slide 2 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(2)">
+                <img src="/images/kona/k-in3.jpg" alt="Slide 3 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(3)">
+                <img src="/images/kona/k-in4.jpg" alt="Slide 4 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(4)">
+                <img src="/images/kona/k-in5.jpg" alt="Slide 5 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(5)">
+                <img src="/images/kona/k-in6.jpg" alt="Slide 6 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(6)">
+                <img src="/images/kona/k-in7.jpg" alt="Slide 7 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(7)">
+                <img src="/images/kona/k-in8.jpg" alt="Slide 8 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(8)">
+                <img src="/images/kona/k-in9.jpg" alt="Slide 9 Preview">
+            </div>
+        </div>
+    </section>
+
+    <!-- Secure Section -->
+    <section class="SecureSection">
+        <div class="SecureContainer">
+            <div class="SecureTitleContainer">
+                <div class="SecureTitle">Hyundai SmartSense</div>
+                <div class="SecureSubtitle">* Fitur ini hanya tersedia di trim Essential Tech dan Prime</div>
+            </div>
+
+            <!-- Slides and Thumbnails -->
+            <div class="SecureSlide">
+                <img src="/images/kona/k-s1.jpg" alt="Slide 1">
+                <div class="SecureCaption">
+                    <h2>Lane Keeping Assist (LKA)</h2>
+                    <p>Cegah kendaraan keluar jalur lewat kamera depan untuk memantau garis jalan. Jika kendaraan keluar jalur tanpa sengaja, sistem ini memberi peringatan dan dapat mengarahkan mobil kembali ke jalur secara otomatis</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/kona/k-s2.jpg" alt="Slide 2">
+                <div class="SecureCaption">
+                    <h2>Smart Cruise Control (SCC) with Stop & Go</h2>
+                    <p>Membantu menjaga jarak dari kendaraan di depan dan mengemudi pada kecepatan yang ditetapkan, termasuk berhenti dan memulai kembali saat berkendara</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/kona/k-s3.jpg" alt="Slide 3">
+                <div class="SecureCaption">
+                    <h2>Blind-spot View Monitor (BVM)</h2>
+                    <p>Menyalakan lampu sein kiri atau kanan akan mengaktifkan Blind-Spot View Monitor (BVM), yang memantau titik buta dan memproyeksikan video real-time ke digital meter cluster. Pandangan belakang kiri dan kanan saat berpindah jalur memberikan gambaran berkendara lebih lengkap</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/kona/k-s4.jpg" alt="Slide 4">
+                <div class="SecureCaption">
+                    <h2>Lane Following Assist (LFA)</h2>
+                    <p>Menggunakan kamera depan untuk mendeteksi marka jalan dan lalu lintas, untuk membantu pengemudi agar kendaraan tetap di tengah jalur</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/kona/k-s5.jpg" alt="Slide 5">
+                <div class="SecureCaption">
+                    <h2>Forward Collision-avoidance Assist with Junction Turning (FCA-JT)</h2>
+                    <p>Menggunakan radar dan kamera, FCA-JT mendeteksi pengereman mendadak kendaraan di depan, pejalan kaki, dan pesepeda. Sistem ini otomatis mengerem jika diperlukan saat berbelok kanan di persimpangan untuk menghindari kendaraan yang datang dari arah berlawanan</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/kona/k-s6.jpg" alt="Slide 6">
+                <div class="SecureCaption">
+                    <h2>Rear Cross-traffic Collision-avoidance Assist (RCCA)</h2>
+                    <p>Saat mundur dari tempat parkir, sistem mendeteksi kendaraan yang mendekat dari sisi samping kiri atau kanan. Memberikan peringatan suara dan visual, serta mengaktifkan pengereman jika diperlukan.</p>
+                </div>
+            </div>
+
+            <div class="SecureSlide">
+                <img src="/images/kona/k-s7.jpg" alt="Slide 7">
+                <div class="SecureCaption">
+                    <h2>Blind-spot Collision-avoidance Assist (BCA)</h2>
+                    <p>Deteksi kendaraan di sisi belakang yang berada di titik buta dan cegah risiko tabrakan saat berpindah jalur atau keluar dari parkir paralel dengan memberikan peringatan memberikan peringatan dan mengaktifkan pengereman otomatis</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="SecureThumbnails">
+            <div class="securethumbnail" onclick="showSecureSlide(0)">
+                <img src="/images/kona/k-s1.jpg" alt="Slide 1 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(1)">
+                <img src="/images/kona/k-s2.jpg" alt="Slide 2 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(2)">
+                <img src="/images/kona/k-s3.jpg" alt="Slide 3 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(3)">
+                <img src="/images/kona/k-s4.jpg" alt="Slide 4 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(4)">
+                <img src="/images/kona/k-s5.jpg" alt="Slide 5 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(5)">
+                <img src="/images/kona/k-s6.jpg" alt="Slide 6 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(6)">
+                <img src="/images/kona/k-s7.jpg" alt="Slide 7 Preview">
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="warranty-section">
+        <div class="section-title-container">
+            <img src="/images/bluelink.webp" alt="Blue Link">
+        </div>
+        <div class="warranty-banners">
+            <div class="warranty-banner spare-part">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>SPARE PART</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner maintenance">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>MAINTENANCE</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner warranty">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/100,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>WARRANTY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Cards Section -->
+    <section class="action-cards-section">
+        <div class="action-cards-container">
+            <div class="action-card">
+                <i class="fas fa-file-pdf"></i>
+                <h3>Download Pricelist</h3>
+                <a href="pricelist.pdf" download class="action-button">Download PDF</a>
+            </div>
+
+            <div class="action-card">
+                <i class="fas fa-car"></i>
+                <h3>Book a Test Drive</h3>
+                <a href="https://wa.me/6282175014690?text=I'd%20like%20to%20book%20a%20test%20drive" target="_blank" class="action-button">Contact via WhatsApp</a>
+            </div>
+
+            <div class="action-card">
+                <i class="fas fa-tag"></i>
+                <h3>Request an Offer</h3>
+                <a href="https://wa.me/6282175014690?text=I'm%20interested%20in%20getting%20an%20offer" target="_blank" class="action-button">Contact via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Profile Section -->
+    <section class="bio-profile-section">
+        <div class="bio-container">
+            <div class="bio-image">
+                <img src="/api/placeholder/300/300" alt="Sales Representative">
+            </div>
+            <div class="bio-content">
+                <h2>Your Personal Sales Consultant</h2>
+                <h3>Wijanarko Salim</h3>
+                <p>Sales Consultant - Hyundai Indonesia</p>
+                <div class="bio-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+6281234567890">+62 821 7501 4690</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:kekesalim9@gmail.com">kekesalim9@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/6282175014690" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Location Map Section -->
+    <section class="map-section">
+        <h2 class="section-title">Visit Our Store</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5487284718364!2d106.79091!3d-6.178691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7b66a943f1b%3A0x6e4f4f52aefdf7f!2sMall%20Taman%20Anggrek!5e0!3m2!1sen!2sid!4v1708935848673!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-details">
+                <h3>Hyundai City Store</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Taman Anggrek, Ground Floor, Unit XX</p>
+                <p><i class="fas fa-clock"></i> Opening Hours: 10:00 - 22:00 (Mon-Sun)</p>
+                <a href="https://maps.app.goo.gl/AoywNyYvF2vP8XYX8" target="_blank" class="cta-button">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Models</h4>
+                <ul>
+                    <li><a href="stargazer.html">STARGAZER</a></li>
+                    <li><a href="#">Model 2</a></li>
+                    <li><a href="#">Model 3</a></li>
+                    <li><a href="#">Model 4</a></li>
+                    <li><a href="#">All Models</a></li>
+                </ul>
+            </div>
+            <!-- Other footer columns -->
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 All rights reserved. Legal notice. Privacy policy. Cookies. Terms of use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script at the end of the body to optimize video loading -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Optimize loading screen
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.display = 'none';
+            }, 1000);
+            
+            // Intersection Observer for lazy loading videos
+            if ('IntersectionObserver' in window) {
+                const videoElement = document.querySelector('.hero-video');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (videoElement.paused) {
+                                videoElement.play();
+                            }
+                        } else {
+                            if (!videoElement.paused) {
+                                videoElement.pause();
+                            }
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                observer.observe(videoElement);
+            }
+        });
+    </script>
+</body>
+</html>
