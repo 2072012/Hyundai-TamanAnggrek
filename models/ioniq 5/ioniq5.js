@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevButton = document.querySelector('.prev-button-batik');
     const nextButton = document.querySelector('.next-button-batik');
     let currentSlide = 0;
-    const totalSlides = 13; // Total number of slides
+    const totalSlides = 14; // Total number of slides
 
     // Function to show a specific slide
     function showSlide(index) {
