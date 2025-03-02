@@ -328,6 +328,10 @@ body {
     font-size: 0.8rem;
     text-align: center;
 }
+.model-card .cta-button:hover {
+    background-color: black;
+    color: #fff;
+}
 
 /* Featured section with large image */
 .featured-section {

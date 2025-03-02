@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai VENUE</title>
+    <link rel="stylesheet" href="venue.css">
+    <script src="venue.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/lvs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="/images/logo.png" alt="Hyundai Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p>Loading experience...</p>
+        </div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="/home.html"><img class="logo" src="/images/logo.png" alt="Logo"></a>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-container" id="navContainer">
+            <ul class="nav-links">
+                <li><a href="venue.html" style="color: darkblue;">VENUE</a></li>
+                <li><a href="/models/creta/creta.html">CRETA</a></li>
+                <li><a href="/models/stargazer/stargazer.html">STARGAZER</a></li>
+                <li><a href="/models/kona/kona.html">KONA</a></li>
+                <li><a href="/models/ioniq 5/ioniq5.html">IONIQ 5</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="/home.html">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <!-- Optimized video loading with lazy loading and poster image -->
+        <video class="hero-video" autoplay muted loop playsinline poster="/images/venue/venue-model.jpg" loading="lazy">
+            <source src="venue.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 id="models">VENUE</h1>
+            <p>Turbocharge The Excitement</p>
+            <!-- <a href="#" class="cta-button">Explore Models</a> -->
+        </div>
+    </section>
+
+    <!-- Featured Section - Slideshow -->
+    <section class="featured-section">
+        <h2 class="featured-section-title">VENUE</h2>
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="slides">
+                <div class="slide">
+                    <img src="/images/venue/v1.png" alt="Venue Image 1">
+                </div>
+                <div class="slide">
+                    <img src="/images/venue/v2.png" alt="Venue Image 2">
+                </div>
+                <div class="slide">
+                    <img src="/images/venue/v3.png" alt="Venue Image 3">
+                </div>
+                <div class="slide">
+                    <img src="/images/venue/v4.png" alt="Venue Image 4">
+                </div>
+                <div class="slide">
+                    <img src="/images/venue/v5.png" alt="Venue Image 5">
+                </div>
+            </div>
+
+            <!-- Arrow Buttons -->
+            <button class="arrow-button prev-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+            </button>
+            <button class="arrow-button next-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Reusable Section Component -->
+    <div class="InteriorTitleContainer">
+        <div class="InteriorTitle">Dynamic Design For Your Excitement</div>
+    </div>
+
+    <div class="caption">
+        <div class="caption-title">Turbocharge The Space</div>
+        <div class="caption-subtitle">Hyundai VENUE menyuguhkan kombinasi interior yang inovatif dan stylish. Ruangnya yang lega dapat menyimpan segala keperluan dengan rapi</div>
+    </div>
+
+    <div class="caption">
+        <div class="caption-title">Kappa 1.0 T-GDi engine</div>
+        <div class="caption-subtitle">Mesin turbo Hyundai VENUE dapat berikan tenaga maksimal yang kamu butuhkan dengan akselerasi yang mulus dan gesit untuk sensasi berkendara yang lebih seru</div>
+    </div>
+
+    <!-- Performance Section -->
+    <section class="performance-section">
+        <div class="performance-content">
+            <div class="performance-image">
+                <img src="/images/venue/v1.png" alt="Performance Image">
+            </div>
+            <div class="performance-text">
+                <div class="text-pair">
+                    <div class="big-text">120 PS / 6.000rpm</div>
+                    <div class="small-text">Maksimum Power</div>
+                </div>
+                <div class="text-pair">
+                    <div class="big-text">172 Nm / 1.500 ~ 4.000rpm</div>
+                    <div class="small-text">Maksimum Torsi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performance-section">
+        <div class="performance-content">
+          <div class="performance-text">
+            <!-- Pair 1 -->
+            <div class="text-pair">
+              <!-- <div class="big-text">Make Space For Excitement</div> -->
+              <div class="small-text">Hyundai VENUE memberikan kombinasi interior yang nyaman dan trendi. Dilengkapi beragam fitur untuk jadikan perjalananmu lebih menyenangkan</div>
+            </div>
+          </div>
+          <div class="performance-image">
+            <img src="/images/venue/vin.jpg" alt="Performance Image">
+          </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <!-- First Feature Row -->
+        <div class="feature-row">
+          <div class="feature-image">
+            <img src="/images/venue/vin11.jpg" alt="Feature Image">
+          </div>
+          <div class="feature-text">
+            <div class="feature-title">7-speed Dual Clutch Automatic Transmission</div>
+            <!-- <div class="feature-description">Your feature description here</div> -->
+          </div>
+        </div>
+
+        <!-- Second Feature Row (image on right) -->
+        <div class="feature-row image-right">
+          <div class="feature-image">
+            <img src="/images/venue/vin12.jpg" alt="Feature Image">
+          </div>
+          <div class="feature-text">
+            <div class="feature-title" style="text-align: right;">Drive Mode</div>
+            <!-- <div class="feature-description">Your feature description here</div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Interior Section -->
+      <section class="InteriorSection">
+        <div class="InteriorContainer">
+            <div class="InteriorTitleContainer">
+                <div class="InteriorTitle">Interior Features</div>
+                <div class="InteriorSubtitle">Make space for excitement</div>
+            </div>
+
+            <!-- Slides and Thumbnails -->
+            <div class="InteriorSlide">
+                <img src="/images/venue/vin6.jpg" alt="Slide 1">
+                <div class="InteriorCaption">
+                    <h2>8-inch Touch Display</h2>
+                    <!-- <p>Your description here</p> -->
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/venue/vin7.jpg" alt="Slide 2">
+                <div class="InteriorCaption">
+                    <h2>Sunroof</h2>
+                    <!-- <p>Your description here</p> -->
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/venue/vin8.jpg" alt="Slide 3">
+                <div class="InteriorCaption">
+                    <h2>4.2-inch TFT LCD Cluster</h2>
+                    <!-- <p>Your description here</p> -->
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/venue/vin9.jpg" alt="Slide 4">
+                <div class="InteriorCaption">
+                    <h2>Tilt Steering</h2>
+                    <!-- <p>Your description here</p> -->
+                </div>
+            </div>
+
+            <div class="InteriorSlide">
+                <img src="/images/venue/vin10.jpg" alt="Slide5">
+                <div class="InteriorCaption">
+                    <h2>Automatic Climate Control With Cluster Ionizer</h2>
+                    <!-- <p>Your description here</p> -->
+                </div>
+            </div>
+
+            <!-- Add more slides as needed -->
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="InteriorThumbnails">
+            <div class="thumbnail" onclick="showInteriorSlide(0)">
+                <img src="/images/venue/vin6.jpg" alt="Slide 1 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(1)">
+                <img src="/images/venue/vin7.jpg" alt="Slide 2 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(2)">
+                <img src="/images/venue/vin8.jpg" alt="Slide 3 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(3)">
+                <img src="/images/venue/vin9.jpg" alt="Slide 4 Preview">
+            </div>
+            <div class="thumbnail" onclick="showInteriorSlide(4)">
+                <img src="/images/venue/vin10.jpg" alt="Slide 5 Preview">
+            </div>
+            <!-- Add more thumbnails as needed -->
+        </div>
+    </section>
+
+    <!-- Secure Section -->
+    <section class="SecureSection">
+        <div class="SecureContainer">
+            <div class="SecureTitleContainer">
+                <div class="SecureTitle">Kendarai Dengan Penuh Percaya Diri</div><br>
+                <div class="SecureSubtitle">Dengan fitur keamanan Hyundai VENUE yang canggih, nikmati perjalanan berkendara dengan tenang bersama Hyundai VENUE</div><br>
+            </div>
+
+            <!-- Slides and Thumbnails -->
+            <div class="SecureSlide">
+                <img src="/images/venue/vins1.jpg" alt="Slide 1">
+                <div class="SecureCaption">
+                    <h2>Keamanan terjaga dengan
+                        6-airbag System</h2>
+                    <!-- <p>(Driver, Passenger, Side & Curtain)</p> -->
+                </div>
+            </div>
+            <div class="SecureSlide">
+                <img src="/images/venue/vins2.jpg" alt="Slide 2">
+                <div class="SecureCaption">
+                    <h2>Semakin aman dengan
+                        Rear-view Camera</h2>
+                    <!-- <p>with Parking Guidance</p> -->
+                </div>
+            </div>
+            <div class="SecureSlide">
+                <img src="/images/venue/vins3.jpg" alt="Slide 3">
+                <div class="SecureCaption">
+                    <h2>Menanjak dipandu
+                        Hill Start Assist Control</h2>
+                    <!-- <p>Nikmati momen berkendara dengan penuh percaya diri</p> -->
+                </div>
+            </div>
+
+            <!-- Add more slides as needed -->
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="SecureThumbnails">
+            <div class="securethumbnail" onclick="showSecureSlide(0)">
+                <img src="/images/venue/vins1.jpg" alt="Slide 1 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(1)">
+                <img src="/images/venue/vins2.jpg" alt="Slide 2 Preview">
+            </div>
+            <div class="securethumbnail" onclick="showSecureSlide(2)">
+                <img src="/images/venue/vins3.jpg" alt="Slide 3 Preview">
+            </div>
+            <!-- Add more thumbnails as needed -->
+        </div>
+    </section>
+
+    <!-- Featured Section - Slideshow IONIQ 5 BATIK-->
+    <section class="featured-section-colors">
+        <h2 class="featured-section-title-colors">VENUE Colors Gallery</h2>
+        <div class="slideshow-container-colors">
+            <!-- Slides -->
+            <div class="slides-colors">
+                <div class="slide-colors">
+                    <img src="/images/venue/v6.png" alt="VENUE colors Image 1">
+                </div>
+                <div class="slide-colors">
+                    <img src="/images/venue/v7.png" alt="VENUE colors Image 2">
+                </div>
+                <div class="slide-colors">
+                    <img src="/images/venue/v8.png" alt="VENUE colors Image 3">
+                </div>
+                <div class="slide-colors">
+                    <img src="/images/venue/v9.png" alt="VENUE colors Image 4">
+                </div>
+                <div class="slide-colors">
+                    <img src="/images/venue/v10.png" alt="VENUE colors Image 5">
+                </div>      
+            </div>
+
+            <!-- Arrow Buttons -->
+            <button class="arrow-button-colors prev-button-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+            </button>
+            <button class="arrow-button-colors next-button-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- Warranty Section -->
+    <section class="warranty-section">
+        <div class="section-title-container">
+            <img src="/images/bluelink.webp" alt="Blue Link">
+        </div>
+        <div class="warranty-banners">
+            <div class="warranty-banner spare-part">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>SPARE PART</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner maintenance">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/60,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>FREE</span>
+                    <span>MAINTENANCE</span>
+                </div>
+            </div>
+
+            <div class="warranty-banner warranty">
+                <div class="warranty-years">
+                    <span class="number">3+1</span>
+                    <div class="years-text">
+                        Years<br>
+                        <span class="km">/100,000 Km</span>
+                    </div>
+                </div>
+                <div class="warranty-text">
+                    <span>WARRANTY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Cards Section -->
+    <section class="action-cards-section">
+        <div class="action-cards-container">
+            <div class="action-card">
+                <i class="fas fa-file-pdf"></i>
+                <h3>Download Pricelist</h3>
+                <a href="pricelist.pdf" download class="action-button">Download PDF</a>
+            </div>
+
+            <div class="action-card">
+                <i class="fas fa-car"></i>
+                <h3>Book a Test Drive</h3>
+                <a href="https://wa.me/6282175014690?text=I'd%20like%20to%20book%20a%20test%20drive" target="_blank" class="action-button">Contact via WhatsApp</a>
+            </div>
+
+            <div class="action-card">
+                <i class="fas fa-tag"></i>
+                <h3>Request an Offer</h3>
+                <a href="https://wa.me/6282175014690?text=I'm%20interested%20in%20getting%20an%20offer" target="_blank" class="action-button">Contact via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Profile Section -->
+    <section class="bio-profile-section">
+        <div class="bio-container">
+            <div class="bio-image">
+                <img src="/profile.jpeg" alt="Sales Representative">
+            </div>
+            <div class="bio-content">
+                <h2>Your Personal Sales Consultant</h2>
+                <h3>Your Name Here</h3>
+                <p>Sales Consultant - Hyundai Indonesia</p>
+                <div class="bio-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+6281234567890">+62 812 3456 7890</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Location Map Section -->
+    <section class="map-section">
+        <h2 class="section-title">Visit Our Store</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5487284718364!2d106.79091!3d-6.178691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7b66a943f1b%3A0x6e4f4f52aefdf7f!2sMall%20Taman%20Anggrek!5e0!3m2!1sen!2sid!4v1708935848673!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-details">
+                <h3>Hyundai City Store</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Mall Taman Anggrek, Ground Floor, Unit XX</p>
+                <p><i class="fas fa-clock"></i> Opening Hours: 10:00 - 22:00 (Mon-Sun)</p>
+                <a href="https://maps.app.goo.gl/AoywNyYvF2vP8XYX8" target="_blank" class="cta-button">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Models</h4>
+                <ul>
+                    <li><a href="stargazer.html">STARGAZER</a></li>
+                    <li><a href="#">Model 2</a></li>
+                    <li><a href="#">Model 3</a></li>
+                    <li><a href="#">Model 4</a></li>
+                    <li><a href="#">All Models</a></li>
+                </ul>
+            </div>
+            <!-- Other footer columns -->
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 All rights reserved. Legal notice. Privacy policy. Cookies. Terms of use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script at the end of the body to optimize video loading -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Optimize loading screen
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.display = 'none';
+            }, 1000);
+            
+            // Intersection Observer for lazy loading videos
+            if ('IntersectionObserver' in window) {
+                const videoElement = document.querySelector('.hero-video');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (videoElement.paused) {
+                                videoElement.play();
+                            }
+                        } else {
+                            if (!videoElement.paused) {
+                                videoElement.pause();
+                            }
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                observer.observe(videoElement);
+            }
+        });
+    </script>
+</body>
+</html>
