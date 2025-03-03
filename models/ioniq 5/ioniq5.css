@@ -210,14 +210,14 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 0.75rem;
     line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 1.5rem;
 }
 
@@ -346,29 +346,29 @@ body {
      .hidden {
         display: none;
       }
-      .featured-section-batik {
+      .featured-section-colors {
         padding: 2rem 1rem; /* Consistent padding */
         text-align: center;
     }
     
-    .featured-section-title-batik {
+    .featured-section-title-colors {
         font-size: 2rem;
         margin-bottom: 1rem; /* Add spacing below the title */
     }
     
-    .slideshow-container-batik {
+    .slideshow-container-colors {
         position: relative;
         max-width: 1400px; /* Adjust the max-width as needed */
         margin: 0 auto;
         overflow: hidden;
     }
     
-    .slides-batik {
+    .slides-colors {
         display: flex;
         transition: transform 0.5s ease-in-out;
     }
     
-    .slide-batik {
+    .slide-colors {
         min-width: 100%;
         box-sizing: border-box;
         display: flex;
@@ -376,7 +376,7 @@ body {
         align-items: center;
     }
     
-    .slide-batik img {
+    .slide-colors img {
         width: 100%; /* Ensure the image takes up the full width of the slide */
         max-width: 1000px; /* Adjust the max-width to control the image size */
         height: auto; /* Maintain aspect ratio */
@@ -384,7 +384,7 @@ body {
         object-fit: cover; /* Ensure the image covers the container */
     }
     
-    .arrow-button-batik {
+    .arrow-button-colors {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -404,52 +404,55 @@ body {
         border-radius: 8px;
     }
     
-    .arrow-button-batik:hover {
+    .arrow-button-colors:hover {
         background-color: #8989897a;
     }
     
-    .prev-button-batik {
+    .prev-button-colors {
         left: 10px;
     }
     
-    .next-button-batik {
+    .next-button-colors {
         right: 10px;
     }
     
-    .arrow-button-batik svg {
+    .arrow-button-colors svg {
         width: 24px;
         height: 24px;
     }
     
     /* Responsive Styles for Mobile */
     @media (max-width: 768px) {
-        .featured-section-title-batik {
+        .featured-section-title-colors {
             font-size: 1.5rem; /* Smaller title for mobile */
         }
+        .featured-section-title{
+            font-size: 1.5rem;
+        }
     
-        .slideshow-container-batik {
+        .slideshow-container-colors {
             max-width: 100%; /* Full width on mobile */
         }
     
-        .slide-batik img {
+        .slide-colors img {
             max-width: 100%; /* Full width images on mobile */
             border-radius: 10px; /* Smaller border radius for mobile */
         }
     
-        .arrow-button-batik {
+        .arrow-button-colors {
             width: 40px; /* Smaller buttons for mobile */
             height: 40px;
             font-size: 2vh;
         }
     
-        .arrow-button-batik svg {
+        .arrow-button-colors svg {
             width: 18px; /* Smaller arrow icons for mobile */
             height: 18px;
         }
     }
  /* Mobile Responsive Styles */
  @media screen and (max-width: 768px) {
-    .arrow-button-batik {
+    .arrow-button-colors {
       width: 40px;
       height: 40px;
       font-size: 2vh;
@@ -459,23 +462,23 @@ body {
   
   /* Small Mobile Styles */
   @media screen and (max-width: 480px) {
-    .arrow-button-batik {
+    .arrow-button-colors {
       width: 30px;
       height: 30px;
       font-size: 1.5vh;
       padding: 4px;
     }
     
-    .prev-button-batik {
+    .prev-button-colors {
       left: 5px;
     }
     
-    .next-button-batik {
+    .next-button-colors {
       right: 5px;
     }
   }
      /* Hide buttons when needed */
-     .hidden-batik {
+     .hidden-colors {
         display: none;
       }
  
@@ -503,7 +506,7 @@ body {
 }
 
 .caption-title {
-    font-size: 1.75rem; /* Slightly smaller on mobile */
+    font-size: 1.5rem; /* Slightly smaller on mobile */
     font-weight: bold;
     color: #333;
     margin-bottom: 1rem; /* Increased space between title and subtitle on mobile */
@@ -511,7 +514,7 @@ body {
 }
 
 .caption-subtitle {
-    font-size: 0.95rem; /* Slightly smaller on mobile */
+    font-size: 0.8rem; /* Slightly smaller on mobile */
     color: #666;
     width: 100%; /* Full width on mobile */
     line-height: 1.6;
@@ -550,12 +553,12 @@ body {
     }
     
     .section-title {
-        font-size: 2.2rem; /* Slightly larger title on very large screens */
+        font-size: 2rem; /* Slightly larger title on very large screens */
     }
     
     .section-subtitle {
         max-width: 70%; /* Allow more space on very large screens */
-        font-size: 1.1rem; /* Slightly larger text on very large screens */
+        font-size: 1rem; /* Slightly larger text on very large screens */
     }
 }
 
@@ -631,11 +634,11 @@ body {
     }
 
     .big-text {
-        font-size: 28px;
+        font-size: 1.5rem;
     }
 
     .small-text {
-        font-size: 16px;
+        font-size: 0.8rem;
     }
 }
 
@@ -686,14 +689,14 @@ body {
   }
   
   .feature-title {
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 15px;
     color: #333;
   }
   
   .feature-description {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     color: #555;
   }
@@ -712,8 +715,78 @@ body {
       width: 100%;
        border-radius: 8px;
     }
+    .feature-title {
+        font-size: 1.5rem;
+      }
+      
+      .feature-description {
+        font-size: 0.8rem;
+      }
   }
+  .side-to-side-section{
+    width: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+}
+.side-to-side-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+}
+.side-to-side-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.side-to-side-content-text {
+    grid-column: 1 / 4;
+}
+.side-to-side-content-text h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.side-to-side-content-text p {
+    font-size: 1rem;
+    text-align: justify;
+    color: grey;
+}
+.side-to-side-content-img img {
+    max-width: 700px;
+    height: auto;
+    object-fit: fill;
+    border-radius: 10px;
+}
 
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .side-to-side-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-gap: 20px;
+    }
+    .side-to-side-content-text {
+        grid-column: 1 / -1; /* Span across all columns */
+    }
+    .side-to-side-content-text h2{
+       font-size: 1.5rem;
+    }
+    .side-to-side-content-text p{
+        font-size: 0.8rem;
+     }
+    .side-to-side-content-img {
+        grid-row: 2; /* Move image below the text */
+    }
+    .side-to-side-content-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: fill;
+    border-radius: 10px;
+}
+}
 /* Interior Section - Slideshow */
 .InteriorSection {
     width: 100%;
@@ -775,7 +848,7 @@ body {
 }
 
 .InteriorCaption h2 {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
     color: #333;
     margin-top: 1rem;
@@ -784,7 +857,7 @@ body {
 }
 
 .InteriorCaption p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
     line-height: 1.6;
     max-width: 700px;
@@ -794,7 +867,7 @@ body {
 }
 
 .InteriorCaption small {
-    font-size: 14px;
+    font-size: 0.8rem;
     color: #999;
 }
 
@@ -827,7 +900,29 @@ body {
         padding: 0 10px; /* Add padding to caption */
         box-sizing: border-box;
     }
+    .InteriorTitle {
+        font-size: 1.5rem;
+  
+    }
     
+    .InteriorSubtitle {
+        font-size: 0.8rem;
+
+    }
+    .InteriorCaption h2 {
+        font-size: 1rem;
+
+    }
+    
+    .InteriorCaption p {
+        font-size: 0.8rem;
+
+    }
+    
+    .InteriorCaption small {
+        font-size: 0.5rem;
+
+    }
     .InteriorThumbnails {
         padding: 0 5px; /* Add padding to thumbnails container */
         box-sizing: border-box;
@@ -908,7 +1003,7 @@ body {
     color: #666;
     max-width: 900px;
     width: 100%; /* Full width up to max-width */
-    text-align: justify;
+    text-align: center justify;
 }
 .SecureSlide {
     display: none;
@@ -928,7 +1023,7 @@ body {
 }
 
 .SecureCaption h2 {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
     color: #333;
     margin-top: 1rem;
@@ -936,7 +1031,7 @@ body {
 }
 
 .SecureCaption p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
     line-height: 1.6;
     max-width: 700px;
@@ -946,7 +1041,7 @@ body {
 }
 
 .SecureCaption small {
-    font-size: 14px;
+    font-size: 0.8rem;
     color: #999;
 }
 
@@ -991,16 +1086,23 @@ body {
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
+    .SecureTitle {
+        font-size: 1.5rem;
+    }
+    
+    .SecureSubtitle {
+        font-size: 0.8rem;
+    }
     .SecureCaption h2 {
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .SecureCaption p {
-        font-size: 14px;
+        font-size: 0.8rem;
     }
 
     .SecureCaption small {
-        font-size: 12px;
+        font-size: 0.5rem;
     }
 
     .SecurePrev, .SecureNext {
@@ -1518,11 +1620,11 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .section-title {
@@ -1655,3 +1757,136 @@ footer {
         margin-bottom: 0;
     }
 }
+
+.featured-section-batik {
+    padding: 2rem 1rem; /* Consistent padding */
+    text-align: center;
+}
+
+.featured-section-title-batik {
+    font-size: 2rem;
+    margin-bottom: 1rem; /* Add spacing below the title */
+}
+
+.slideshow-container-batik {
+    position: relative;
+    max-width: 1400px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides-batik {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-batik {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-batik img {
+    width: 100%; /* Ensure the image takes up the full width of the slide */
+    max-width: 1000px; /* Adjust the max-width to control the image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.arrow-button-batik {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 3vh;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cdcdcd45;
+    border-radius: 8px;
+}
+
+.arrow-button-batik:hover {
+    background-color: #8989897a;
+}
+
+.prev-button-batik {
+    left: 10px;
+}
+
+.next-button-batik {
+    right: 10px;
+}
+
+.arrow-button-batik svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .featured-section-title-batik {
+        font-size: 1.5rem; /* Smaller title for mobile */
+    }
+
+    .slideshow-container-batik {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .slide-batik img {
+        max-width: 100%; /* Full width images on mobile */
+        border-radius: 10px; /* Smaller border radius for mobile */
+    }
+
+    .arrow-button-batik {
+        width: 40px; /* Smaller buttons for mobile */
+        height: 40px;
+        font-size: 2vh;
+    }
+
+    .arrow-button-batik svg {
+        width: 18px; /* Smaller arrow icons for mobile */
+        height: 18px;
+    }
+}
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+.arrow-button-batik {
+  width: 40px;
+  height: 40px;
+  font-size: 2vh;
+  padding: 6px;
+}
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+.arrow-button-batik {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5vh;
+  padding: 4px;
+}
+
+.prev-button-batik {
+  left: 5px;
+}
+
+.next-button-batik {
+  right: 5px;
+}
+}
+ /* Hide buttons when needed */
+ .hidden-batik {
+    display: none;
+  }

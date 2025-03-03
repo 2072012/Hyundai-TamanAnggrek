@@ -257,3 +257,50 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelector('.slides-colors');
+    const prevButton = document.querySelector('.prev-button-colors');
+    const nextButton = document.querySelector('.next-button-colors');
+    let currentSlide = 0;
+    const totalSlides = 6; // Total number of slides
+
+    // Function to show a specific slide
+    function showSlide(index) {
+        // Prevent going out of bounds
+        if (index < 0) {
+            index = 0; // Stay on the first slide
+        } else if (index >= totalSlides) {
+            index = totalSlides - 1; // Stay on the last slide
+        }
+
+        // Move the slides
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        currentSlide = index;
+
+        // Hide/show buttons based on the current slide
+        if (currentSlide === 0) {
+            prevButton.classList.add('hidden-colors'); // Hide left button on slide 0
+        } else {
+            prevButton.classList.remove('hidden-colors'); // Show left button
+        }
+
+        if (currentSlide === totalSlides - 1) {
+            nextButton.classList.add('hidden-colors'); // Hide right button on slide 5
+        } else {
+            nextButton.classList.remove('hidden-colors'); // Show right button
+        }
+    }
+
+    // Previous button functionality
+    prevButton.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+    });
+
+    // Next button functionality
+    nextButton.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+    });
+
+    // Initialize button states
+    showSlide(currentSlide);
+});

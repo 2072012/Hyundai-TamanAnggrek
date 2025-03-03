@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .side-to-side-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 50px;
+            padding: 50px;
+            align-items: center;
+        }
+        .side-to-side-container > div {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        .side-to-side-content-text {
+            grid-column: 1 / 4;
+        }
+        .side-to-side-content-text h2 {
+            font-size: 2rem;
+            text-align: left;
+        }
+        .side-to-side-content-text p {
+            font-size: 1rem;
+            text-align: justify;
+            color: grey;
+        }
+        .side-to-side-content-img img {
+            max-width: 800px;
+            height: auto;
+            object-fit: fill;
+            border-radius: 10px;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+            .side-to-side-container {
+                grid-template-columns: 1fr; /* Single column layout */
+                grid-gap: 20px;
+                padding: 20px;
+            }
+            .side-to-side-content-text {
+                grid-column: 1 / -1; /* Span across all columns */
+            }
+            .side-to-side-content-img {
+                grid-row: 2; /* Move image below the text */
+            }
+            .side-to-side-content-img img {
+            max-width: 100%;
+            height: auto;
+            object-fit: fill;
+            border-radius: 10px;
+        }
+        }
+
+        .up-and-down-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 50px;
+            padding: 50px;
+            align-items: center;
+        }
+        .up-and-down-container > div {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        .up-and-down-content-text {
+            grid-column: 1 / 5;
+        }
+        .up-and-down-content-text h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+        .up-and-down-content-text p {
+            font-size: 1rem;
+            text-align: center justify;
+            color: grey;
+        }
+        .up-and-down-content-img img {
+            max-width: 500px;
+            height: 900px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+            .up-and-down-container {
+                grid-template-columns: 1fr; /* Single column layout */
+                grid-gap: 20px;
+                padding: 20px;
+            }
+            .up-and-down-content-text {
+                grid-column: 1 / -1; /* Span across all columns */
+            }
+            .up-and-down-content-img {
+                grid-row: 2; /* Move image below the text */
+            }
+            .up-and-down-content-img img {
+            max-width: 100%;
+            height: auto;
+            object-fit: fill;
+            border-radius: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <section class="side-to-side">
+        <div class="side-to-side-container">
+            <div class="side-to-side-content-text">
+                <h2>Overtake the Ordinary</h2>
+                <p>Hadirnya The new TUCSON menjadi simbol ekspresi diri Anda yang berkelas, berani dan siap melampaui standar. Dengan performa mesin hybrid dan desain dinamis, The new TUCSON akan membawa Anda ke level berikutnya.</p>
+            </div>
+            <div class="side-to-side-content-img">
+                <img src="/images/tucson/tucson-model.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="up-and-down">
+        <div class="up-and-down-container">
+            <div class="up-and-down-content-text">
+                <h2>Overtake the Ordinary</h2>
+                <p>Hadirnya The new TUCSON menjadi simbol ekspresi diri Anda yang berkelas, berani dan siap melampaui standar. Dengan performa mesin hybrid dan desain dinamis, The new TUCSON akan membawa Anda ke level berikutnya.</p>
+            </div>
+            <div class="up-and-down-content-img">
+                <img src="/images/tucson/tucson-model.jpg">
+            </div>
+            <div class="up-and-down-content-img">
+                <img src="/images/tucson/tucson-model.jpg">
+            </div>
+            <div class="up-and-down-content-img">
+                <img src="/images/tucson/tucson-model.jpg">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
