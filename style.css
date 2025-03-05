@@ -266,13 +266,20 @@ body {
     margin: 0 auto;
 }
 
-/* Updated model card styling for mobile */
 .model-card {
     position: relative;
-    height: 300px; /* Shorter height for mobile */
+    height: 300px;
     overflow: hidden;
     text-align: left;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
 .model-image {
@@ -285,6 +292,11 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover .model-image {
+    transform: scale(1.05);
 }
 
 .model-image::after {
@@ -295,7 +307,13 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
-    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.model-card:hover .model-image::after {
+    opacity: 0.8;
 }
 
 /* Card content container */
@@ -303,9 +321,14 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     padding: 1.25rem;
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover .model-card-content {
+    transform: translateY(-10px);
 }
 
 .model-name {
@@ -313,26 +336,98 @@ body {
     font-weight: 400;
     margin-bottom: 0.25rem;
     color: #fff;
+    transition: color 0.3s ease;
+}
+
+.model-card:hover .model-name {
+    color: #fff;
 }
 
 .model-price {
     font-size: 1rem;
     color: #e0e0e0;
     margin-bottom: 0.75rem;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-.model-card .cta-button {
-    background-color: rgba(255, 255, 255, 0.9);
+.model-card:hover .model-price {
+    opacity: 1;
+}
+
+.model-card-content .model-buttons {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.model-card:hover .model-buttons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.model-card .cta-button,
+.model-card .offer-button {
+    flex: 1;
     display: inline-block;
     padding: 0.6rem 1.25rem;
     font-size: 0.8rem;
     text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
 }
+
+.model-card .cta-button {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.model-card .offer-button {
+    background-color: #002167;
+    color: #fff;
+}
+
 .model-card .cta-button:hover {
     background-color: black;
     color: #fff;
 }
 
+.model-card .offer-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 767px) {
+    .model-card-content .model-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .model-card .cta-button,
+    .model-card .offer-button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .model-card {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .model-card {
+        height: 450px;
+    }
+}
 /* Featured section with large image */
 .featured-section {
     min-height: 18rem;
@@ -1033,3 +1128,195 @@ footer {
         margin-bottom: 0;
     }
 }
+
+/* Promo Section Styles */
+.promo-section {
+    background-color: #f9f9f9;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.promo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.promo-content h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #002167;
+}
+
+.promo-text p {
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+}
+
+.promo-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.highlight {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-10px);
+}
+
+.highlight i {
+    font-size: 2.5rem;
+    color: #002167;
+    margin-bottom: 1rem;
+}
+
+.highlight h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #002167;
+}
+
+.highlight p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Promo Image Gallery with Hover Effect */
+.promo-image-gallery {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.promo-image-row {
+    width: 100%;
+    position: relative;
+}
+
+.promo-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.promo-image img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.promo-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.promo-image-container:hover img {
+    filter: blur(5px);
+}
+
+.promo-image-container:hover .promo-image-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    gap: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-button i {
+    font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .promo-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .promo-text p {
+        font-size: 1.1rem;
+    }
+
+    .promo-highlights {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .highlight {
+        flex: 1;
+        padding: 2rem;
+    }
+
+    .highlight i {
+        font-size: 3rem;
+    }
+
+    .highlight h3 {
+        font-size: 1.4rem;
+    }
+
+    .highlight p {
+        font-size: 1rem;
+    }
+
+    .promo-image-row {
+        flex-direction: row;
+    }
+
+    .promo-image img {
+        max-height: 50vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .promo-image-gallery {
+        gap: 1.5rem;
+    }
+
+    .promo-image img {
+        max-height: 60vh;
+    }
+}
+
