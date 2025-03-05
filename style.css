@@ -11,7 +11,7 @@ body {
     background-color: #fff;
     overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
-/* Loading Screen Styles - Add to your style.css file */
+/* Loading Screen Styles - Add to your style.css?v=1.2 file */
 .loading-screen {
     position: fixed;
     top: 0;
@@ -460,7 +460,7 @@ body {
     display: inline-block;
 }
 
-/* Add this to your style.css file */
+/* Add this to your style.css?v=1.2 file */
 /* Warranty Section with Blue Link logo */
 .warranty-section {
     padding: 3rem 1rem;
@@ -697,7 +697,7 @@ body {
     transition: background-color 0.3s ease;
     width: 100%; /* Full width for better tap targets */
 }
-/* Add this to your style.css file or modify the existing action-cards-container class */
+/* Add this to your style.css?v=1.2 file or modify the existing action-cards-container class */
 
 @media (min-width: 768px) {
     .action-cards-container {
