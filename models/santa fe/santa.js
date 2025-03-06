@@ -418,23 +418,29 @@ exteriorSlider.addEventListener('touchend', () => {
 // Initialize
 exteriorShowSlide(0);
 
-// Adjust slider height for mobile
 function adjustSliderHeight() {
-  if (window.innerWidth <= 768) {
-    const doubleSlideHeight = document.querySelector('.exterior-double-slide') ? 
-      document.querySelector('.exterior-double-slide').scrollHeight : 800;
-    const singleSlideHeight = document.querySelector('.exterior-slide') ?
-      document.querySelector('.exterior-slide').scrollHeight : 400;
-      
-    exteriorSlides.forEach(slide => {
-      if (slide.classList.contains('exterior-double-slide')) {
-        // Already handled by CSS flex-direction
-      } else {
-        slide.style.height = `${singleSlideHeight}px`;
-      }
-    });
-  }
+    if (window.innerWidth <= 768) {
+        // Get the height of the first slide as a reference
+        const firstSlide = document.querySelector('.exterior-slide, .exterior-double-slide');
+        if (!firstSlide) return;
+
+        const slideHeight = firstSlide.scrollHeight;
+
+        // Set a maximum height to prevent the slider from growing indefinitely
+        const maxHeight = 600; // Adjust this value as needed
+
+        // Apply the height to all slides, ensuring it doesn't exceed the max height
+        exteriorSlides.forEach(slide => {
+            slide.style.height = `${Math.min(slideHeight, maxHeight)}px`;
+        });
+    } else {
+        // Reset the height for larger screens
+        exteriorSlides.forEach(slide => {
+            slide.style.height = 'auto'; // Reset to auto for larger screens
+        });
+    }
 }
 
+// Call the function on load and resize
 window.addEventListener('load', adjustSliderHeight);
 window.addEventListener('resize', adjustSliderHeight);

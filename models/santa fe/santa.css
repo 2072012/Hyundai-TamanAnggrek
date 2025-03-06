@@ -901,7 +901,17 @@ body {
     gap: 15px; /* Slightly smaller gap for mobile */
   }
 }
+/* Ensure the slides don't grow beyond a certain height on mobile */
+@media (max-width: 768px) {
+    .exterior-slide, .exterior-double-slide {
+        max-height: 600px; /* Adjust this value as needed */
+        overflow: hidden; /* Prevent content from overflowing */
+    }
 
+    .exterior-double-slide {
+        flex-direction: column; /* Stack the double slides vertically on mobile */
+    }
+}
 /* Extra small devices */
 @media screen and (max-width: 480px) {
   .exterior-double-slide  .exterior-section-image {
