@@ -1361,7 +1361,7 @@ body {
     width: 100%; /* Full width for better tap targets */
 }
 
-/* Add this to your style.css?v=1.2 file or modify the existing action-cards-container class */
+/* Add this to your style.css?v=2.0 file or modify the existing action-cards-container class */
 @media (min-width: 768px) {
     .action-cards-container {
         flex-direction: row;
