@@ -335,81 +335,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 let exteriorCurrentSlide = 0;
+const exteriorSlides = document.querySelectorAll('.exterior-slide, .exterior-double-slide');
+const exteriorDots = document.querySelectorAll('.exterior-dot');
 const exteriorSlider = document.getElementById('exterior-slider');
-let exteriorSlides, exteriorDots;
 
-// Initialize the slider
-function initExteriorSlider() {
-  // Get all slides and dots
-  exteriorSlides = document.querySelectorAll('#exterior-slider > .exterior-slide, #exterior-slider > .exterior-double-slide');
-  exteriorDots = document.querySelectorAll('.exterior-dot');
-  
-  // Make sure we have enough dots
-  updateDots();
-  
-  // Touch event variables
-  let touchStartX = 0;
-  let touchEndX = 0;
+// Touch event variables
+let touchStartX = 0;
+let touchEndX = 0;
 
-  // Set up touch events
-  exteriorSlider.addEventListener('touchstart', function(e) {
-    touchStartX = e.changedTouches[0].screenX;
-  });
+// Set up touch events
+exteriorSlider.addEventListener('touchstart', function(e) {
+  touchStartX = e.changedTouches[0].screenX;
+});
 
-  exteriorSlider.addEventListener('touchend', function(e) {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  // Initialize
-  exteriorShowSlide(0);
-  
-  // Set up auto-slide
-  let slideInterval = setInterval(() => {
-    exteriorChangeSlide(1);
-  }, 5000);
-
-  // Pause auto-slide when interacting with slider
-  exteriorSlider.addEventListener('mouseenter', () => {
-    clearInterval(slideInterval);
-  });
-
-  exteriorSlider.addEventListener('mouseleave', () => {
-    slideInterval = setInterval(() => {
-      exteriorChangeSlide(1);
-    }, 5000);
-  });
-
-  exteriorSlider.addEventListener('touchstart', () => {
-    clearInterval(slideInterval);
-  });
-
-  exteriorSlider.addEventListener('touchend', () => {
-    slideInterval = setInterval(() => {
-      exteriorChangeSlide(1);
-    }, 5000);
-  });
-}
-
-// Update dots to match the number of slides
-function updateDots() {
-  const dotsContainer = document.getElementById('exterior-dots');
-  
-  // Clear existing dots
-  dotsContainer.innerHTML = '';
-  
-  // Create new dots
-  for (let i = 0; i < exteriorSlides.length; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'exterior-dot';
-    if (i === 0) dot.classList.add('active');
-    dot.onclick = function() { exteriorJumpToSlide(i); };
-    dotsContainer.appendChild(dot);
-  }
-  
-  // Update the exteriorDots reference
-  exteriorDots = document.querySelectorAll('.exterior-dot');
-}
+exteriorSlider.addEventListener('touchend', function(e) {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
 
 function handleSwipe() {
   const swipeThreshold = 50; // minimum distance required for swipe
@@ -431,7 +373,6 @@ function exteriorShowSlide(index) {
     exteriorCurrentSlide = index;
   }
   
-  // Calculate the position based on slide width
   exteriorSlider.style.transform = `translateX(-${exteriorCurrentSlide * 100}%)`;
   
   // Update dots
@@ -448,120 +389,52 @@ function exteriorJumpToSlide(index) {
   exteriorShowSlide(index);
 }
 
+// Auto slide every 5 seconds
+let slideInterval = setInterval(() => {
+  exteriorChangeSlide(1);
+}, 5000);
+
+// Pause auto-slide when interacting with slider
+exteriorSlider.addEventListener('mouseenter', () => {
+  clearInterval(slideInterval);
+});
+
+exteriorSlider.addEventListener('mouseleave', () => {
+  slideInterval = setInterval(() => {
+    exteriorChangeSlide(1);
+  }, 5000);
+});
+
+exteriorSlider.addEventListener('touchstart', () => {
+  clearInterval(slideInterval);
+});
+
+exteriorSlider.addEventListener('touchend', () => {
+  slideInterval = setInterval(() => {
+    exteriorChangeSlide(1);
+  }, 5000);
+});
+
+// Initialize
+exteriorShowSlide(0);
+
 // Adjust slider height for mobile
 function adjustSliderHeight() {
   if (window.innerWidth <= 768) {
+    const doubleSlideHeight = document.querySelector('.exterior-double-slide') ? 
+      document.querySelector('.exterior-double-slide').scrollHeight : 800;
+    const singleSlideHeight = document.querySelector('.exterior-slide') ?
+      document.querySelector('.exterior-slide').scrollHeight : 400;
+      
     exteriorSlides.forEach(slide => {
       if (slide.classList.contains('exterior-double-slide')) {
-        // Handle double slides with CSS flexbox
+        // Already handled by CSS flex-direction
       } else {
-        // Set height for single slides if needed
-        const imageHeight = slide.querySelector('img').offsetHeight;
-        const contentHeight = slide.querySelector('.exterior-content').offsetHeight;
-        slide.style.height = `${imageHeight + contentHeight}px`;
+        slide.style.height = `${singleSlideHeight}px`;
       }
-    });
-  } else {
-    // Reset heights for desktop view
-    exteriorSlides.forEach(slide => {
-      slide.style.height = '';
     });
   }
 }
 
-// Run initialization when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  initExteriorSlider();
-  adjustSliderHeight();
-});
-
+window.addEventListener('load', adjustSliderHeight);
 window.addEventListener('resize', adjustSliderHeight);
-
-// Function to add new slides programmatically
-function addExteriorSlide(isDouble, imageUrls, titles, descriptions, footerNotes) {
-  let newSlide;
-  
-  if (isDouble) {
-    // Create double slide
-    newSlide = document.createElement('div');
-    newSlide.className = 'exterior-double-slide';
-    
-    for (let i = 0; i < 2; i++) {
-      const halfSlide = document.createElement('div');
-      halfSlide.className = 'exterior-half-slide';
-      
-      const img = document.createElement('img');
-      img.src = imageUrls[i];
-      img.alt = 'Car feature';
-      img.className = 'exterior-section-image';
-      
-      const content = document.createElement('div');
-      content.className = 'exterior-content';
-      
-      const title = document.createElement('div');
-      title.className = 'exterior-title';
-      title.textContent = titles[i];
-      
-      content.appendChild(title);
-      
-      if (descriptions && descriptions[i]) {
-        const description = document.createElement('div');
-        description.className = 'exterior-description';
-        description.textContent = descriptions[i];
-        content.appendChild(description);
-      }
-      
-      if (footerNotes && footerNotes[i]) {
-        const footerNote = document.createElement('div');
-        footerNote.className = 'exterior-footer-note';
-        footerNote.textContent = footerNotes[i];
-        content.appendChild(footerNote);
-      }
-      
-      halfSlide.appendChild(img);
-      halfSlide.appendChild(content);
-      newSlide.appendChild(halfSlide);
-    }
-  } else {
-    // Create single slide
-    newSlide = document.createElement('div');
-    newSlide.className = 'exterior-slide';
-    
-    const img = document.createElement('img');
-    img.src = imageUrls[0];
-    img.alt = 'Car feature';
-    img.className = 'exterior-section-image';
-    
-    const content = document.createElement('div');
-    content.className = 'exterior-content';
-    
-    const title = document.createElement('div');
-    title.className = 'exterior-title';
-    title.textContent = titles[0];
-    
-    content.appendChild(title);
-    
-    if (descriptions && descriptions[0]) {
-      const description = document.createElement('div');
-      description.className = 'exterior-description';
-      description.textContent = descriptions[0];
-      content.appendChild(description);
-    }
-    
-    if (footerNotes && footerNotes[0]) {
-      const footerNote = document.createElement('div');
-      footerNote.className = 'exterior-footer-note';
-      footerNote.textContent = footerNotes[0];
-      content.appendChild(footerNote);
-    }
-    
-    newSlide.appendChild(img);
-    newSlide.appendChild(content);
-  }
-  
-  // Add the new slide to the slider
-  exteriorSlider.appendChild(newSlide);
-  
-  // Reinitialize the slider to update slides and dots
-  initExteriorSlider();
-}
