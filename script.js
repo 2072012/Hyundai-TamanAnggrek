@@ -83,3 +83,84 @@ document.addEventListener('DOMContentLoaded', function() {
         hideLoadingScreen();
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get DOM elements
+    const slidesContainer = document.querySelector('.slides-colors');
+    const slides = document.querySelectorAll('.slide-colors');
+    const prevButton = document.querySelector('.prev-button-colors');
+    const nextButton = document.querySelector('.next-button-colors');
+    
+    // Initial setup
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    // Initialize button visibility
+    updateButtonVisibility();
+    
+    // Navigation functions
+    function goToSlide(index) {
+      currentIndex = index;
+      slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateButtonVisibility();
+    }
+    
+    function goToPrevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        goToSlide(currentIndex);
+      }
+    }
+    
+    function goToNextSlide() {
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        goToSlide(currentIndex);
+      }
+    }
+    
+    // Update button visibility based on current slide
+    function updateButtonVisibility() {
+      // Hide prev button on first slide
+      if (currentIndex === 0) {
+        prevButton.style.display = 'none';
+      } else {
+        prevButton.style.display = 'flex';
+      }
+      
+      // Hide next button on last slide
+      if (currentIndex === totalSlides - 1) {
+        nextButton.style.display = 'none';
+      } else {
+        nextButton.style.display = 'flex';
+      }
+    }
+    
+    // Event listeners
+    prevButton.addEventListener('click', goToPrevSlide);
+    nextButton.addEventListener('click', goToNextSlide);
+    
+    // Touch swipe functionality
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slidesContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    slidesContainer.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, {passive: true});
+    
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left
+        goToNextSlide();
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right
+        goToPrevSlide();
+      }
+    }
+  });

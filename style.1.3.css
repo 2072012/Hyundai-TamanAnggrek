@@ -1355,3 +1355,172 @@ footer {
         font-size: 1.1rem;
     }
 }
+
+/* CRETA Colors Gallery - Complete Remake */
+.featured-section-colors {
+    padding: 3rem 1rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .featured-section-title-colors {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .featured-section-title-colors:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #0066cc;
+    margin: 0.5rem auto 0;
+  }
+  
+  .slideshow-container-colors {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .slides-colors {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+  
+  .slide-colors {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .slide-colors img {
+    max-width: 65%;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+  }
+  
+  .arrow-button-colors {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    transition: all 0.2s ease;
+  }
+  
+  .arrow-button-colors:hover {
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .arrow-button-colors svg {
+    width: 22px;
+    height: 22px;
+    color: #333;
+  }
+  
+  .prev-button-colors {
+    left: 15px;
+  }
+  
+  .next-button-colors {
+    right: 15px;
+  }
+  
+  /* Tablet Styles */
+  @media (max-width: 768px) {
+    .featured-section-title-colors {
+      font-size: 1.8rem;
+    }
+    
+    .featured-section-title-colors:after {
+      width: 60px;
+    }
+    
+    .slide-colors {
+      padding: 1.5rem;
+    }
+    
+    .slide-colors img {
+      max-width: 75%;
+      max-height: 280px;
+    }
+    
+    .arrow-button-colors {
+      width: 38px;
+      height: 38px;
+    }
+    
+    .arrow-button-colors svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .featured-section-colors {
+      padding: 2rem 0.75rem;
+    }
+    
+    .featured-section-title-colors {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .featured-section-title-colors:after {
+      width: 50px;
+      height: 2px;
+    }
+    
+    .slide-colors {
+      padding: 1.25rem;
+    }
+    
+    .slide-colors img {
+      max-width: 85%;
+      max-height: 220px;
+    }
+    
+    .arrow-button-colors {
+      width: 34px;
+      height: 34px;
+    }
+    
+    .arrow-button-colors svg {
+      width: 16px;
+      height: 16px;
+    }
+    
+    .prev-button-colors {
+      left: 10px;
+    }
+    
+    .next-button-colors {
+      right: 10px;
+    }
+  }
